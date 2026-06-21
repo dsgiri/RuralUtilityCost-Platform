@@ -19,7 +19,9 @@ The project follows a **Feature-based architecture** to keep the codebase modula
 
 ```text
 /
-├── docs/                   # Documentation, Calculator Registry & Standards
+├── docs/
+│   ├── public/             # Architecture, Coding Standards, Calculator Registry
+│   └── internal/           # Private business logic, PRDs, SEO, Backlogs
 ├── scripts/                # Utility scripts (e.g., Sanity seeding)
 ├── src/
 │   ├── components/         # Shared global UI components (Buttons, Layout, SEO)
@@ -63,7 +65,7 @@ We enforce a strict standard for all calculators added to the platform:
 3. **Visual feedback** when it helps understanding (progress bars, charts).
 4. **Trustworthy math** that users can verify.
 
-*Before adding a new calculator, please consult `AGENTS.md`, `docs/CALCULATOR_REGISTRY.md` and `docs/Calculator-Standard.md` to ensure fitment and prevent duplication.*
+*Before adding a new calculator, please consult `AGENTS.md`, `docs/public/CALCULATOR_REGISTRY.md` and `docs/public/Calculator-Standard.md` to ensure fitment and prevent duplication.*
 
 ## 🔗 Open Source & Repository
 This is a **public GitHub repository**. The project is managed at [dsgiri/ruralutilitycost-platform](https://github.com/dsgiri/ruralutilitycost-platform). The domain name for the live application is **RuralUtilityCost.com**.

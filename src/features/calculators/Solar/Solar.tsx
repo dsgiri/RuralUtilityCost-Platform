@@ -3,6 +3,7 @@ import { SEO } from '../../../components/SEO';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { PlusCircle, Trash2 } from 'lucide-react';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function Solar() {
   const [zip, setZip] = useState('');
@@ -183,7 +184,9 @@ export default function Solar() {
           </div>
         </div>
 
-        <ExportActions 
+        <CalculatorSanityContent uniqueCode="CALC-UTIL-207" />
+
+              <ExportActions 
           title="Off-Grid Solar Calculator" 
           targetRef={resultRef}
           data={{

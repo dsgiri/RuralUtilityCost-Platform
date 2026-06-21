@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { Hexagon, Calculator, Info, RotateCcw } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function HiveStartup() {
   const [hives, setHives] = useState(2);
@@ -240,7 +241,9 @@ export default function HiveStartup() {
               </div>
             </div>
 
-            <div className="mt-8 bg-green-900/30 rounded-xl p-4 flex gap-3 text-green-100 text-sm leading-relaxed">
+            <CalculatorSanityContent uniqueCode="CALC-FARM-304" />
+
+          <div className="mt-8 bg-green-900/30 rounded-xl p-4 flex gap-3 text-green-100 text-sm leading-relaxed">
               <Info className="w-5 h-5 shrink-0 text-green-300" />
               <p>
                 These are estimates. Prices vary significantly based on equipment types (unassembled vs fully painted) and your location. Honey extraction equipment is not included here, as it's typically a second-year purchase or rented from a local club.

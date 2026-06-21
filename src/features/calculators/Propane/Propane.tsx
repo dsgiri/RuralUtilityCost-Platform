@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function Propane() {
   const [tankSize, setTankSize] = useState<number>(500);
@@ -147,6 +148,8 @@ export default function Propane() {
                   </a>
                 </div>
               </div>
+
+              <CalculatorSanityContent uniqueCode="CALC-UTIL-206" />
 
               <ExportActions 
                 title="Propane Refill"

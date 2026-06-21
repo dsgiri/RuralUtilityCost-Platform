@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { Tag, Calculator, Info, RotateCcw } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function MeatCostPerLb() {
   const [animals, setAnimals] = useState(1);
@@ -182,7 +183,9 @@ export default function MeatCostPerLb() {
               </div>
             </div>
 
-            <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6">
+            <CalculatorSanityContent uniqueCode="CALC-FARM-303" />
+
+          <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-2">Build Your Full Farm Budget</h3>
               <p className="text-gray-600 mb-4">
                 Calculate livestock feed budgets, monitor breeding dates, and track your agricultural startup costs.

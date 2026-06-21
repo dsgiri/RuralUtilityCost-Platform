@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function Gravel() {
   const [length, setLength] = useState(50);
@@ -133,7 +134,9 @@ export default function Gravel() {
           </div>
         </div>
 
-        <ExportActions 
+        <CalculatorSanityContent uniqueCode="CALC-PROP-104" />
+
+              <ExportActions 
           title="Gravel Cost Calculator" 
           targetRef={resultRef}
           data={{

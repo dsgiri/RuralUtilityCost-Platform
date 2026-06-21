@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { Scissors, Calculator, Info, RotateCcw } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function MeatProcessing() {
   const [animals, setAnimals] = useState(1);
@@ -225,7 +226,9 @@ export default function MeatProcessing() {
         </div>
       </div>
       
-      <div className="mt-8 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+      <CalculatorSanityContent uniqueCode="CALC-FARM-302" />
+
+          <div className="mt-8 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
         <h3 className="flex items-center gap-2 font-bold text-gray-900 mb-4 text-base">
           <Info className="w-5 h-5 text-orange-600" />
           How it works

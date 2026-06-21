@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 type AnimalType = 'cattle' | 'goat' | 'sheep' | 'pig' | 'horse' | 'alpaca' | 'dog';
 
@@ -190,17 +191,21 @@ export default function Gestation() {
               </div>
 
               {results && (
-                <ExportActions 
-                  title="Animal Gestation"
-                  data={{
-                  ...{  animal: selectedAnimal.name, inputDate, calcMode  },
-                  ...{  
-                    breedingDate: results.breedingDate.toISOString().split('T')[0], 
-                    dueDate: results.dueDate.toISOString().split('T')[0], 
-                    gestationDays: results.days 
-                   }
-                }}
-                />
+                <>
+                  <CalculatorSanityContent uniqueCode="CALC-FARM-309" />
+
+                  <ExportActions 
+                    title="Animal Gestation"
+                    data={{
+                    ...{  animal: selectedAnimal.name, inputDate, calcMode  },
+                    ...{  
+                      breedingDate: results.breedingDate.toISOString().split('T')[0], 
+                      dueDate: results.dueDate.toISOString().split('T')[0], 
+                      gestationDays: results.days 
+                     }
+                  }}
+                  />
+                </>
               )}
             </div>
           </div>

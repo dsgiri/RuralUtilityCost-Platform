@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { Clock, Calculator, Info, RotateCcw } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function GenRuntime() {
   const [sizeKW, setSizeKW] = useState(10);
@@ -291,7 +292,9 @@ export default function GenRuntime() {
               </div>
             </div>
 
-            <div className="mt-8 bg-sky-100/60 rounded-xl p-4 flex gap-3 text-sky-800 text-sm leading-relaxed">
+            <CalculatorSanityContent uniqueCode="CALC-UTIL-202" />
+
+          <div className="mt-8 bg-sky-100/60 rounded-xl p-4 flex gap-3 text-sky-800 text-sm leading-relaxed">
               <Info className="w-5 h-5 shrink-0 text-sky-500" />
               <p>
                 Results are estimates. Auto-estimated burn rates assume a 20% baseline idle draw plus linear fuel scaling with load. Weather, engine age, and power surges can skew actual consumption.

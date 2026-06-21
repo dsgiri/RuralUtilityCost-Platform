@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { Flame, Calculator, Info, RotateCcw } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function GenFuelCost() {
   const [sizeKW, setSizeKW] = useState(10);
@@ -192,7 +193,9 @@ export default function GenFuelCost() {
               </div>
             </div>
 
-            <div className="mt-8 bg-orange-100/60 rounded-xl p-4 flex gap-3 text-orange-800 text-sm leading-relaxed">
+            <CalculatorSanityContent uniqueCode="CALC-UTIL-203" />
+
+          <div className="mt-8 bg-orange-100/60 rounded-xl p-4 flex gap-3 text-orange-800 text-sm leading-relaxed">
               <Info className="w-5 h-5 shrink-0 text-orange-500" />
               <p>
                 Generators use fuel even with zero load to maintain 60Hz frequency (approx 20% of max burn). This calculator adjusts for basic engine parasitic loss.

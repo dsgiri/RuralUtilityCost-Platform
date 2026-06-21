@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 type BirdType = 'chicken' | 'duck' | 'quail' | 'turkey' | 'goose' | 'guinea_fowl' | 'pheasant';
 
@@ -203,18 +204,22 @@ export default function Incubation() {
               </div>
 
               {results && (
-                <ExportActions 
-                  title="Egg Incubation"
-                  data={{
-                  ...{  bird: selectedBird.name, inputDate, calcMode  },
-                  ...{  
-                    setDate: results.setDate.toISOString().split('T')[0], 
-                    lockdownDate: results.lockdownDate.toISOString().split('T')[0], 
-                    hatchDate: results.hatchDate.toISOString().split('T')[0], 
-                    incubationDays: results.days 
-                   }
-                }}
-                />
+                <>
+                  <CalculatorSanityContent uniqueCode="CALC-FARM-310" />
+
+                  <ExportActions 
+                    title="Egg Incubation"
+                    data={{
+                    ...{  bird: selectedBird.name, inputDate, calcMode  },
+                    ...{  
+                      setDate: results.setDate.toISOString().split('T')[0], 
+                      lockdownDate: results.lockdownDate.toISOString().split('T')[0], 
+                      hatchDate: results.hatchDate.toISOString().split('T')[0], 
+                      incubationDays: results.days 
+                     }
+                  }}
+                  />
+                </>
               )}
             </div>
           </div>

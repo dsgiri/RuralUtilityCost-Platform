@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { SEO } from '../../../components/SEO';
 import { PlusCircle, Trash2 } from 'lucide-react';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function Livestock() {
   const [animalStr, setAnimalStr] = useState('cattle');
@@ -144,7 +145,9 @@ export default function Livestock() {
           </div>
         </div>
 
-        <ExportActions 
+        <CalculatorSanityContent uniqueCode="CALC-FARM-308" />
+
+              <ExportActions 
           title="Livestock Water Requirements Calculator" 
           targetRef={resultRef}
           data={{

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { Landmark, Info, Banknote, AlertTriangle, ArrowRight, RotateCcw } from 'lucide-react';
 import { cn } from '../../../lib/utils';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 type Tab = 'simple' | 'reimbursable';
 
@@ -355,7 +356,9 @@ export default function GrantReadiness() {
         </div>
       )}
 
-      <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6">
+      <CalculatorSanityContent uniqueCode="CALC-GOV-502" />
+
+          <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6">
         <h3 className="text-lg font-bold text-gray-900 mb-2">Build Your Rural Business Plan</h3>
         <p className="text-gray-600 mb-4">
           Find matching grants, calculate expansion ROI, and ensure food processing compliance.

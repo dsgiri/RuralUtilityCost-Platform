@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function Well() {
   const [depth, setDepth] = useState(250);
@@ -164,7 +165,9 @@ export default function Well() {
           </div>
         </div>
 
-        <ExportActions 
+        <CalculatorSanityContent uniqueCode="CALC-PROP-106" />
+
+              <ExportActions 
           title="Well Drilling Cost Calculator" 
           targetRef={resultRef}
           data={{

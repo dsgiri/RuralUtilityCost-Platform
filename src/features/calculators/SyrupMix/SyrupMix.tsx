@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { Beaker, Info, RotateCcw, Calculator } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function SyrupMix() {
   const [targetAmount, setTargetAmount] = useState(1);
@@ -216,7 +217,9 @@ export default function SyrupMix() {
 
             </div>
 
-            <div className="mt-8 bg-blue-100/60 rounded-xl p-4 flex gap-3 text-blue-800 text-sm leading-relaxed">
+            <CalculatorSanityContent uniqueCode="CALC-FARM-306" />
+
+          <div className="mt-8 bg-blue-100/60 rounded-xl p-4 flex gap-3 text-blue-800 text-sm leading-relaxed">
               <Info className="w-5 h-5 shrink-0 text-blue-500" />
               <p>
                 Ratios are usually calculated by weight. Since 1 pint of water weighs approx 1 pound, this tool converts final liquid volume directly into pounds of sugar and measured volumes of water.

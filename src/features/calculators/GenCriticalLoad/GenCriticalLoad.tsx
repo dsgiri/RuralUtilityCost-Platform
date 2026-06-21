@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ZapOff, Calculator, Info, RotateCcw, AlertTriangle } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function GenCriticalLoad() {
   const [criticalLoadKW, setCriticalLoadKW] = useState(4.5);
@@ -238,7 +239,9 @@ export default function GenCriticalLoad() {
               </div>
             </div>
 
-            <div className="mt-8 bg-green-900/30 rounded-xl p-4 flex gap-3 text-green-100 text-sm leading-relaxed">
+            <CalculatorSanityContent uniqueCode="CALC-UTIL-204" />
+
+          <div className="mt-8 bg-green-900/30 rounded-xl p-4 flex gap-3 text-green-100 text-sm leading-relaxed">
               <Info className="w-5 h-5 shrink-0 text-green-300" />
               <p>
                 To maximize runtime during an extended outage, cycle high-load critical appliances (like well pumps and water heaters) independently.

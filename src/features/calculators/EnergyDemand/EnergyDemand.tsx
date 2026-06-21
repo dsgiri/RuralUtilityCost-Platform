@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ExportActions } from '../../../components/ExportActions';
 import { Sun, Snowflake, RotateCcw, Zap } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 interface Appliance {
   id: string;
@@ -212,6 +213,8 @@ export default function EnergyDemand() {
                   </a>
                 </div>
               </div>
+
+              <CalculatorSanityContent uniqueCode="CALC-UTIL-201" />
 
               <ExportActions 
                 title="Energy Demand Peak"

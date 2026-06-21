@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function Fencing() {
   const [perimeter, setPerimeter] = useState<number>(500);
@@ -205,6 +206,8 @@ export default function Fencing() {
                   </a>
                 </div>
               </div>
+
+              <CalculatorSanityContent uniqueCode="CALC-PROP-105" />
 
               <ExportActions 
                 title="Fencing"

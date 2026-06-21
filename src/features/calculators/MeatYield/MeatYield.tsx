@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { Scale, Calculator, Info, RotateCcw } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function MeatYield() {
   const [species, setSpecies] = useState('Beef');
@@ -202,7 +203,9 @@ export default function MeatYield() {
               </div>
             </div>
 
-            <div className="mt-8 bg-rose-100/60 rounded-xl p-4 flex gap-3 text-rose-800 text-sm leading-relaxed">
+            <CalculatorSanityContent uniqueCode="CALC-FARM-301" />
+
+          <div className="mt-8 bg-rose-100/60 rounded-xl p-4 flex gap-3 text-rose-800 text-sm leading-relaxed">
               <Info className="w-5 h-5 shrink-0 text-rose-500" />
               <p>
                 Highly trimmed, boneless cuts produce less total weight but yield more pure meat. Bone-in cuts increase your final boxed weight.

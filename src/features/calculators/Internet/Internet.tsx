@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { SEO } from '../../../components/SEO';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function Internet() {
   const [zip, setZip] = useState('76001');
@@ -156,7 +157,9 @@ export default function Internet() {
           </div>
         </div>
 
-        <ExportActions 
+        <CalculatorSanityContent uniqueCode="CALC-UTIL-208" />
+
+              <ExportActions 
           title="Rural Internet Cost Calculator" 
           targetRef={resultRef}
           data={{

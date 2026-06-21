@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function FillDirt() {
   const [length, setLength] = useState(20);
@@ -144,7 +145,9 @@ export default function FillDirt() {
           </div>
         </div>
 
-        <ExportActions 
+        <CalculatorSanityContent uniqueCode="CALC-PROP-103" />
+
+              <ExportActions 
           title="Fill Dirt Cost Calculator" 
           targetRef={resultRef}
           data={{

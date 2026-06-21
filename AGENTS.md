@@ -68,6 +68,14 @@ For every calculator:
 9. Review for accessibility and mobile usability.
 *(Do not build the UI first and math later.)*
 
+## AGILE SOFTWARE DEVELOPMENT METHODOLOGY
+We strictly follow **Agile Software Project Management** principles. The agent MUST adhere to this methodology:
+1. **Iterative Sprints & Delivery:** Break down complex requests into smaller, actionable pieces. Deliver functional, testable increments iteratively.
+2. **Backlog Management:** Actively maintain and update `docs/internal/BACKLOG.md` when defining or completing tasks. Move items from 'Todo' to 'In Progress' to 'Done'.
+3. **PRD Alignment:** Always align tasks and feature requirements with `docs/internal/PRD.md`. 
+4. **Acceptance Criteria:** Never assume requirements. If the user story or acceptance criteria are vague, ask the Product Owner (the user) for clarification before writing code.
+5. **Continuous Documentation:** Update `docs/public/CHANGELOG.md` upon completing user stories to reflect the "Definition of Done".
+
 ## INPUT DESIGN
 Keep forms short and practical.
 - Prioritize a few high-value fields, smart defaults, clear units, and optional advanced settings.
@@ -92,11 +100,11 @@ All formulas must be explicit.
 ## NEW CALCULATOR ONBOARDING: REGISTRY & STANDARDS (CRITICAL)
 **CRITICAL RULE: NEVER START CODING A NEW CALCULATOR IMMEDIATELY.**
 Before writing *any* code for a new calculator or generating any files, you MUST sequentially:
-1. **Verify the Registry:** Check `/docs/CALCULATOR_REGISTRY.md` to see if the requested calculator exists.
-2. **Verify Fitment via the Standard:** Check `/docs/Calculator-Standard.md` to ensure the idea passes the fitment criteria.
+1. **Verify the Registry:** Check `/docs/public/CALCULATOR_REGISTRY.md` to see if the requested calculator exists.
+2. **Verify Fitment via the Standard:** Check `/docs/public/Calculator-Standard.md` to ensure the idea passes the fitment criteria.
 3. **Alert and Ask Questions (DO NOT CODE):** Alert the user (administrator/coder) with your findings. Ask clarifying questions about missing inputs, math, or UX flow.
 4. **Wait for Approval:** Do NOT generate any functional code until the user explicitly confirms.
-5. **Update the Registry Safely:** ONLY after approval and successful build, generate a new unique tracking code and update `/docs/CALCULATOR_REGISTRY.md`.
+5. **Update the Registry Safely:** ONLY after approval and successful build, generate a new unique tracking code and update `/docs/public/CALCULATOR_REGISTRY.md`.
 
 ## TESTING REQUIREMENTS
 Every calculator must include tests for: normal cases, invalid input, zero values, boundary values, rounding behavior.
@@ -128,10 +136,30 @@ Return: pure calculation code, UI components, tests, shared helpers, and a short
 
 ## DOCUMENTATION FOLDER STRUCTURE & PRIVACY
 - **Directory Split:** The `docs/` folder is separated into `docs/public/` and `docs/internal/`.
-- **Public Documentation (`docs/public/`):** Architecture, coding standards, system designs, calculator registries, API specs, and other technical or public-facing guidelines.
+- **Public Documentation (`docs/public/`):** Architecture, coding standards, system designs, calculator registries, API specs, and other technical or public-facing guidelines. ONLY put documents here ONLY if explicitly confirmed by the user.
 - **Internal Documentation (`docs/internal/`):** Business strategy, revenue logic, analytics, operational runbooks, PRD, backlogs, user flows, and other proprietary data.
+- **DEFAULT FALLBACK RULE:** As a strict fallback rule, ALWAYS put new documents, plans, and technical details into `/docs/internal/` unless explicitly confirmed by the user to be public.
 - **CRITICAL CREATION RULE:** Any document containing operational strategy, revenue strategy, SEO strategies, or site-specific administration MUST be placed in `docs/internal/`.
 - **Git Ignore Constraint:** The `docs/internal/` directory and files starting with `PRIVATE-*` are fully ignored by `.gitignore`. Never place sensitive internal strategy docs in the public folder.
+
+## DOCUMENTATION USAGE & MAINTENANCE GUIDELINES
+When writing code, you are expected to treat the `docs/public/` and `docs/internal/` directories as your source of truth:
+- **Consult Before Acting:** Before changing architectural patterns, UI standards, or overarching product logic, read the respective files (e.g., `docs/public/ARCHITECTURE_STANDARDS.md` or `docs/internal/PRD.md`). Don't guess; use the documented rules.
+- **Update on Completion:** When you complete a significant feature, update `docs/internal/BACKLOG.md` (by marking it done/moving it) and `docs/public/CHANGELOG.md` to reflect the work completed.
+- **Maintain Sync:** If you refine a shared component or create a major new standard, document it in `docs/public/UI_UX_STANDARDS.md` or `docs/public/CODING_STANDARDS.md`. Maintain a living documentation system.
+
+## ROLE & PROCESS RULES
+You are an expert software engineer operating under the Agentic Agile PM framework.
+
+### The PIV Workflow Constraints
+You must strictly follow the Plan-Implement-Validate (PIV) loop for every task:
+1. **PLAN FIRST:** Before modifying or creating any code, explain your plan in markdown bullet points. List the exact files you will touch. Wait for human approval.
+2. **IMPLEMENT INCREMENTALLY:** Write clean, modular code. Do not write placeholder comments like `// TODO: implement later`. 
+3. **VALIDATE:** After writing code, output a summary of changes and ask the user to verify or run tests.
+
+### Documentation Maintenance
+- After completing a task, you must automatically update `docs/internal/Tasks.md` (or the respective backlog file like `docs/internal/BACKLOG.md`) to check off the item.
+- If you introduce a new architectural pattern, note it in `Planning.md` (or `docs/public/ARCHITECTURE_STANDARDS.md` and `docs/public/CODING_STANDARDS.md`).
 
 ## FINAL RULE
 Build tools that users trust, understand, and want to use again. If something improves clarity, include it. If something adds complexity without value, leave it out.

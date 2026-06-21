@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { SEO } from '../../../components/SEO';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function Cable() {
   const [zip, setZip] = useState('76001');
@@ -176,7 +177,9 @@ export default function Cable() {
           </div>
         </div>
 
-        <ExportActions 
+        <CalculatorSanityContent uniqueCode="CALC-UTIL-209" />
+
+              <ExportActions 
           title="Cable TV Cost Calculator" 
           targetRef={resultRef}
           data={{

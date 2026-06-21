@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { Droplet, Info, RotateCcw, Calculator } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function HoneyYield() {
   const [colonies, setColonies] = useState(2);
@@ -196,7 +197,9 @@ export default function HoneyYield() {
               </div>
             </div>
 
-            <div className="mt-8 bg-amber-100/50 rounded-xl p-4 flex gap-3 text-amber-800 text-sm leading-relaxed">
+            <CalculatorSanityContent uniqueCode="CALC-FARM-305" />
+
+          <div className="mt-8 bg-amber-100/50 rounded-xl p-4 flex gap-3 text-amber-800 text-sm leading-relaxed">
               <Info className="w-5 h-5 shrink-0 text-amber-500" />
               <p>
                 First-year hives often produce little to no surplus honey as they build out comb. These estimates are intended for established hives in a typical season.

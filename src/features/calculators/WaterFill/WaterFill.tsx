@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { SEO } from '../../../components/SEO';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function WaterFill() {
   const [zip, setZip] = useState('');
@@ -183,7 +184,9 @@ export default function WaterFill() {
           </div>
         </div>
 
-        <ExportActions 
+        <CalculatorSanityContent uniqueCode="CALC-UTIL-205" />
+
+              <ExportActions 
           title="Water Fill Charge Calculator" 
           targetRef={resultRef}
           data={{

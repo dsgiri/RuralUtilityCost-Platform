@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ExportActions } from '../../../components/ExportActions';
 import { Leaf, Trees, Sprout, Tractor, AlertTriangle, ShieldCheck } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function HabitatCost() {
   const [acres, setAcres] = useState<number>(5);
@@ -249,7 +250,9 @@ export default function HabitatCost() {
                 </div>
 
                 <div className="mt-6">
-                  <ExportActions 
+                  <CalculatorSanityContent uniqueCode="CALC-FARM-307" />
+
+              <ExportActions 
                     title="Habitat Cost Estimator"
                     data={{
                   ...{  acres, habitatType, currentCover, plantingMethod, needsProtection  },

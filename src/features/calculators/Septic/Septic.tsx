@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ExportActions } from '../../../components/ExportActions';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 export default function Septic() {
   const [bedrooms, setBedrooms] = useState(3);
@@ -157,7 +158,9 @@ export default function Septic() {
           }}
         />
 
-        <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6 print:hidden">
+        <CalculatorSanityContent uniqueCode="CALC-PROP-102" />
+
+          <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6 print:hidden">
           <h3 className="text-lg font-bold text-gray-900 mb-2">Build Your Full Water Plan</h3>
           <p className="text-gray-600 mb-4">
             If you are installing a new septic system, you usually need a well system. Explore our water planning tools.

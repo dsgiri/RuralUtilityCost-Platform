@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ExportActions } from '../../../components/ExportActions';
 import { ClipboardCheck, Tag, DollarSign, AlertCircle, ShieldCheck, FileText, CheckCircle2, Scale, Info } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 type Tab = 'cost' | 'label' | 'readiness';
 
@@ -529,6 +530,8 @@ export default function FoodProcessingCompliance() {
               </div>
             </div>
           </div>
+
+          <CalculatorSanityContent uniqueCode="CALC-BIZ-403" />
 
           <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6">
             <h3 className="text-lg font-bold text-gray-900 mb-2">Build Your Rural Business Plan</h3>

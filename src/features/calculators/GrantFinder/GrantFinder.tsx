@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { SEO } from '../../../components/SEO';
 import { ExternalLink, Info } from 'lucide-react';
+import { CalculatorSanityContent } from '../CalculatorSanityContent';
 
 type BusinessType = 'small' | 'farm' | 'contractor' | 'utility' | 'nonprofit';
 type Purpose = 'equipment' | 'energy' | 'expansion' | 'hiring' | 'disaster' | 'technology';
@@ -323,6 +324,8 @@ export default function GrantFinder() {
               </div>
             </div>
           </div>
+
+          <CalculatorSanityContent uniqueCode="CALC-GOV-501" />
 
           <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6">
             <h3 className="text-lg font-bold text-gray-900 mb-2">Build Your Rural Business Plan</h3>

@@ -26,7 +26,9 @@ The application enforces a **Feature-Based Architecture**. Rather than grouping 
 
 ```text
 /
-├── docs/                   # Internal documentation, standards, and calculator registry
+├── docs/                   
+│   ├── public/             # Architecture, Coding Standards, Calculator Registry
+│   └── internal/           # Private business logic, PRDs, SEO, Backlogs
 ├── scripts/                # Build and maintenance scripts (e.g., CMS seeding, sitemaps)
 ├── src/
 │   ├── components/         # Shared, generic UI components (Layout, SEO, Buttons)
