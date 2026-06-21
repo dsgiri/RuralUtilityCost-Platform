@@ -91,14 +91,15 @@ const navCategories = [
     ]
   },
   {
-    id: "grants",
-    shortTitle: "Grants",
+    id: "resources",
+    shortTitle: "Resources",
     categoryIcon: Banknote,
-    title: "Government Aid & Grants",
+    title: "Resources & Grants",
     items: [
       { path: '/free-resources', label: 'Free Resources Hub', icon: Banknote, tooltip: 'A curated guide to the best free programs and USDA support' },
       { path: '/grant-readiness', label: 'Grant Match & Readiness', icon: Landmark, tooltip: 'Calculate cash match and bridge funding' },
       { path: '/grant-finder', label: 'Grant Finder', icon: Search, tooltip: 'Search for USDA or state agriculture grants' },
+      { path: '/articles', label: 'Articles & Guides', icon: TrendingUp, tooltip: 'Read expert advice on rural living' },
     ]
   }
 ];
@@ -393,6 +394,7 @@ export function Layout({ children }: { children: ReactNode }) {
                 <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                   <li><Link to="/portfolio" className="hover:text-[#1a5f3f] dark:hover:text-[#6ee7b7] hover:underline font-medium">Platform Portfolio</Link></li>
                   <li><Link to="/about" className="hover:text-[#1a5f3f] dark:hover:text-[#6ee7b7] hover:underline font-medium">About Us</Link></li>
+                  <li><Link to="/articles" className="hover:text-[#1a5f3f] dark:hover:text-[#6ee7b7] hover:underline font-medium">Articles & Guides</Link></li>
                   <li><Link to="/contact" className="hover:text-[#1a5f3f] dark:hover:text-[#6ee7b7] hover:underline font-medium">Contact</Link></li>
                   <li><Link to="/sources" className="hover:text-[#1a5f3f] dark:hover:text-[#6ee7b7] hover:underline font-medium">All Sources & Science</Link></li>
                   <li><Link to="/credits" className="hover:text-[#1a5f3f] dark:hover:text-[#6ee7b7] hover:underline font-medium">Credits</Link></li>

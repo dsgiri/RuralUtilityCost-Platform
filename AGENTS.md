@@ -126,5 +126,17 @@ If the request is unclear or broad, ask targeted clarification questions before 
 ## DELIVERABLE EXPECTATIONS
 Return: pure calculation code, UI components, tests, shared helpers, and a short summary of assumptions and usage. Keep code compact but not cryptic.
 
+## DOCUMENTATION FOLDER STRUCTURE & PRIVACY
+- **Directory Split:** The `docs/` folder is separated into `docs/public/` and `docs/internal/`.
+- **Public Documentation (`docs/public/`):** Architecture, coding standards, system designs, calculator registries, API specs, and other technical or public-facing guidelines.
+- **Internal Documentation (`docs/internal/`):** Business strategy, revenue logic, analytics, operational runbooks, PRD, backlogs, user flows, and other proprietary data.
+- **CRITICAL CREATION RULE:** Any document containing operational strategy, revenue strategy, SEO strategies, or site-specific administration MUST be placed in `docs/internal/`.
+- **Git Ignore Constraint:** The `docs/internal/` directory and files starting with `PRIVATE-*` are fully ignored by `.gitignore`. Never place sensitive internal strategy docs in the public folder.
+
 ## FINAL RULE
 Build tools that users trust, understand, and want to use again. If something improves clarity, include it. If something adds complexity without value, leave it out.
+
+## GITHUB REPOSITORY & SECURITY
+- **Domain:** The live application is hosted at **RuralUtilityCost.com**.
+- **Repository:** This is a **public GitHub repository** located at `https://github.com/dsgiri/ruralutilitycost-platform`.
+- **CRITICAL SECURITY RULE:** Because this repository is public, never, under any circumstances, release, hardcode, or push API keys, secret credentials, or personal tokens to the GitHub repository. All such configurations must be strictly managed locally via `.env`.

@@ -66,6 +66,8 @@ const Credits = lazy(() => import('./pages/Credits'));
 const Partners = lazy(() => import('./pages/Partners'));
 const AdsDemo = lazy(() => import('./pages/AdsDemo'));
 const Portfolio = lazy(() => import('./pages/Portfolio'));
+const ArticlesPage = lazy(() => import('./features/articles/ArticlesPage'));
+const ArticleDetailPage = lazy(() => import('./features/articles/ArticleDetailPage'));
 
 export default function App() {
   return (
@@ -134,6 +136,8 @@ export default function App() {
           <Route path="/credits" element={<Credits />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/ads-demo" element={<AdsDemo />} />
+          <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/articles/:slug" element={<ArticleDetailPage />} />
         </Routes>
         </Suspense>
       </Layout>
