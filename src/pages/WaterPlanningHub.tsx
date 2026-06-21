@@ -85,29 +85,29 @@ export default function WaterPlanningHub() {
         </div>
       </div>
 
-      <div className="bg-gray-50 rounded-2xl p-8 mb-12">
+      <div className="bg-gray-50 rounded-2xl p-8 mb-12 border border-gray-200">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
         <div className="space-y-6">
           <div>
             <h3 className="text-lg font-semibold text-gray-900 focus:outline-none mb-2">Is it cheaper to haul water or drill a well?</h3>
-            <p className="text-gray-600">Drilling a well requires a massive upfront capital investment, but hauling water has a very high ongoing operational cost in fuel and time. Often, if you plan to stay on the property long-term (10+ years), financing a well is more economical.</p>
+            <p className="text-gray-600">Drilling a well requires a huge upfront cost, but hauling water costs you heavily in fuel and time over the long run. If you plan to stay on the property for more than 10 years, financing a well is usually the cheaper choice.</p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 focus:outline-none mb-2">How much water storage do I need if I rely on hauling?</h3>
-            <p className="text-gray-600">A reasonable rule of thumb is to store a minimum of a one-month supply for your household to weather truck breakdowns, bad roads, or severe winter storms. For a very conservative household, this equates to roughly 1,500 to 2,500 gallons.</p>
+            <h3 className="text-lg font-semibold text-gray-900 focus:outline-none mb-2">How much water storage do I need if I haul?</h3>
+            <p className="text-gray-600">Keep at least a one-month supply on hand to survive truck breakdowns, bad roads, or severe winter storms. For a conservative household, that means storing 1,500 to 2,500 gallons.</p>
           </div>
         </div>
       </div>
 
-      <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+      <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg border border-blue-100">
         <div className="flex">
           <div className="flex-shrink-0">
             <Info className="h-5 w-5 text-blue-600" />
           </div>
           <div className="ml-3">
-            <h3 className="text-sm font-medium text-blue-800">Pro-Tip for Rural Water</h3>
+            <h3 className="text-sm font-bold text-blue-800 tracking-tight">Pro-Tip for Rural Water</h3>
             <div className="mt-2 text-sm text-blue-700">
-              <p>Aggressive rainwater catchment can greatly offset hauling costs. Even non-potable catchment water is highly valuable for livestock, gardens, and washing vehicles, which saves your expensive potable water for household use.</p>
+              <p>Catching rainwater can save you massive amounts of money on hauling. Even if you don't filter it for drinking, rainwater is perfect for livestock, gardens, and washing vehicles. Save your expensive potable water for the house.</p>
             </div>
           </div>
         </div>

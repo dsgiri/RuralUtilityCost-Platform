@@ -111,16 +111,20 @@ export default function UtilityCostHub() {
         </div>
       </div>
 
-      <div className="bg-gray-50 rounded-2xl p-8 mb-12">
+      <div className="bg-gray-50 rounded-2xl p-8 mb-12 border border-gray-200">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 focus:outline-none mb-2">Are rural electrical rates higher than city rates?</h3>
-            <p className="text-gray-600">Yes, frequently. Many rural properties are serviced by electric co-ops which may have higher delivery charges or "Peak Demand" billing models because of the infrastructure required to service distant properties.</p>
+            <h3 className="text-lg font-semibold text-gray-900 focus:outline-none mb-2">Are electricity delivery fees higher in the country?</h3>
+            <p className="text-gray-600">Yes. Rural co-ops have to maintain miles of power lines for just a few houses. Because the costs are shared among fewer people, your base connection fee is usually much higher than in a city.</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold text-gray-900 focus:outline-none mb-2">When is the best time to buy propane?</h3>
-            <p className="text-gray-600">Typically, late summer (August) offers the best prices on propane, known as the "summer fill." Prices skyrocket during unexpected winter cold snaps due to high demand and strained delivery logistics.</p>
+            <p className="text-gray-600">Late summer usually offers the best prices on propane, known as the "summer fill." Prices jump during winter cold snaps. Keep in mind: if you lease your tank, you have to buy from the company that owns it. If you own your tank, you can shop around.</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 focus:outline-none mb-2">Is off-grid solar cheaper than running a power line?</h3>
+            <p className="text-gray-600">It depends on the distance. Utility companies often charge between $10,000 and $30,000 per mile for new power lines. If your home is very far from the road, a standalone off-grid solar system might be cheaper upfront. But remember, off-grid systems require you to buy and replace batteries over time.</p>
           </div>
         </div>
       </div>

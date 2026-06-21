@@ -103,29 +103,29 @@ export default function LandConstructionHub() {
         </div>
       </div>
 
-      <div className="bg-gray-50 rounded-2xl p-8 mb-12">
+      <div className="bg-gray-50 rounded-2xl p-8 mb-12 border border-gray-200">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
         <div className="space-y-6">
           <div>
             <h3 className="text-lg font-semibold text-gray-900 focus:outline-none mb-2">What is the difference between tons and cubic yards for gravel?</h3>
-            <p className="text-gray-600">Volume is measured in cubic yards, but quarries often sell by weight (tons). A common conversion factor is 1.4 tons per cubic yard of standard driveway gravel, but this changes based on material density and moisture content.</p>
+            <p className="text-gray-600">Volume is measured in cubic yards, but quarries usually sell by weight (tons). A common rule of thumb is 1.4 tons for every cubic yard of standard driveway gravel. This changes based on how dense and wet the rock is.</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold text-gray-900 focus:outline-none mb-2">Should I grade my land before installing permanent fencing?</h3>
-            <p className="text-gray-600">Usually, yes. Major dips and hills make keeping the wire tight very difficult and leave gaps at the bottom where animals can escape. Spending a little on dozer work to flatten the fence line is almost always worth it.</p>
+            <p className="text-gray-600">Yes. Major dips and hills make keeping the wire tight very difficult and leave gaps at the bottom where animals escape. Spending money on dozer work to flatten the fence line is almost always worth it.</p>
           </div>
         </div>
       </div>
 
-      <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+      <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg border border-blue-100">
         <div className="flex">
           <div className="flex-shrink-0">
             <Info className="h-5 w-5 text-blue-600" />
           </div>
           <div className="ml-3">
-            <h3 className="text-sm font-medium text-blue-800">Pro-Tip for Property Development</h3>
+            <h3 className="text-sm font-bold text-blue-800 tracking-tight">Pro-Tip for Property Development</h3>
             <div className="mt-2 text-sm text-blue-700">
-              <p>When buying raw land, remember that the land price is just the down payment on the property you want. Factoring in the cost of a long access driveway, grid-power connection trenching, and well/septic is mandatory before concluding a parcel is "cheap."</p>
+              <p>The sticker price of raw land is just the down payment. Factoring in the cost of a long access driveway, trenching for power, and installing a well and septic is mandatory before declaring a parcel "cheap."</p>
             </div>
           </div>
         </div>

@@ -150,7 +150,7 @@ export default function FarmCostsHub() {
         </div>
       </div>
 
-      <div className="bg-gray-50 rounded-2xl p-8 mb-12">
+      <div className="bg-gray-50 rounded-2xl p-8 mb-12 border border-gray-200">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
         <div className="space-y-6">
           <div>
@@ -161,6 +161,25 @@ export default function FarmCostsHub() {
             <h3 className="text-lg font-semibold text-gray-900 focus:outline-none mb-2">What is hanging weight vs. packaged weight?</h3>
             <p className="text-gray-600">Live weight is the animal on the hoof. Hanging weight is after the animal is dispatched and skinned/gutted (typically 60% of live weight for beef). Packaged weight is what you put in the freezer after de-boning and trimming (often 60-70% of hanging weight).</p>
           </div>
+        </div>
+      </div>
+
+      <div className="bg-white border-t border-gray-200 py-12 mb-8">
+        <div className="max-w-4xl">
+          <h2 className="text-2xl font-black text-gray-900 tracking-tight mb-4">The Real Math Behind Farming & Livestock</h2>
+          <article className="prose prose-gray max-w-none text-gray-600 space-y-4">
+            <p>
+              Farming requires balancing passion with hard numbers. The choice to raise your own meat or plant a crop can drain your budget quickly if you skip the math.
+            </p>
+            <h3 className="text-lg font-bold text-gray-900 mt-6">Feed Costs Will Make or Break You</h3>
+            <p>
+              Feed is your biggest daily expense. New homesteaders often underestimate how much a steer or pig eats. In winter, when grass is gone, buying retail hay and grain can ruin your profit margin. Our calculators help you plan for these seasonal spikes.
+            </p>
+            <h3 className="text-lg font-bold text-gray-900 mt-6">Does Raising Your Own Meat Actually Save Money?</h3>
+            <p>
+               Raising livestock gives you total control over how the animal is treated and fed. But processing costs add up, and meat shrinks. A 1,200-pound steer will not give you 1,200 pounds of steaks in the freezer. You need to understand the drop from "live weight" to "hanging weight" to see if you are actually saving money.
+            </p>
+          </article>
         </div>
       </div>
 

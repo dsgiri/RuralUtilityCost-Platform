@@ -29,24 +29,31 @@ export function AdUnit({ slot, placement, className = '' }: AdUnitProps) {
 
   // Initialize the ad after the component is mounted
   useEffect(() => {
-    try {
-      // Check if we already initialized this specific ad
-      if (adRef.current && adRef.current.getAttribute('data-adsbygoogle-status') !== 'done') {
-        const adsbygoogle = window.adsbygoogle || [];
-        adsbygoogle.push({});
+    let timeoutId: number;
+    
+    // Slight delay to ensure DOM layout is complete and width is calculated
+    timeoutId = setTimeout(() => {
+      try {
+        // Check if we already initialized this specific ad
+        if (adRef.current && adRef.current.getAttribute('data-adsbygoogle-status') !== 'done') {
+          const adsbygoogle = window.adsbygoogle || [];
+          adsbygoogle.push({});
+        }
+      } catch (err) {
+        console.error('AdSense initialization error', err);
       }
-    } catch (err) {
-      console.error('AdSense initialization error', err);
-    }
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   // Determine spacing and layout behavior based on placement
   const placementClasses = {
-    'header': 'my-8 w-full max-w-7xl mx-auto flex justify-center text-center px-4',
-    'in-content': 'my-10 w-full flex justify-center text-center',
-    'mid-article': 'my-12 w-full max-w-4xl mx-auto flex justify-center text-center',
-    'end-of-content': 'mt-12 mb-8 w-full max-w-5xl mx-auto flex justify-center text-center',
-    'sidebar': 'w-full hidden lg:flex flex-col items-center sticky top-24'
+    'header': 'my-8 w-full max-w-7xl mx-auto block text-center px-4',
+    'in-content': 'my-10 w-full block text-center',
+    'mid-article': 'my-12 w-full max-w-4xl mx-auto block text-center',
+    'end-of-content': 'mt-12 mb-8 w-full max-w-5xl mx-auto block text-center',
+    'sidebar': 'w-full hidden lg:block text-center sticky top-24'
   };
 
   const adStyles = {
@@ -56,21 +63,21 @@ export function AdUnit({ slot, placement, className = '' }: AdUnitProps) {
   };
 
   return (
-    <div className={`ad-container ${placementClasses[placement]} ${className}`}>
+    <div className={`ad-container ${placementClasses[placement]} ${className} overflow-hidden`}>
       {/* 
         Responsive ad unit structure
         Note: The wrapper doesn't have a fixed height to let AdSense expand naturally.
       */}
-      <div className="w-full text-center relative bg-transparent min-h-[50px] flex items-center justify-center">
+      <div className="w-full text-center relative bg-transparent min-h-[100px] block">
         {/* Subtle placeholder label that only shows if ad isn't fully covering it */}
-        <span className="absolute text-[9px] text-gray-400 dark:text-gray-500 tracking-[0.1em] uppercase opacity-40 z-0 pointer-events-none">
+        <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[9px] text-gray-400 dark:text-gray-500 tracking-[0.1em] uppercase opacity-40 z-0 pointer-events-none">
           Advertisement
         </span>
         
         <ins
           ref={adRef}
-          className="adsbygoogle relative z-10 block w-full"
-          style={adStyles}
+          className="adsbygoogle relative z-10"
+          style={{ display: 'block' }}
           data-ad-client="ca-pub-9785752001527360" // Assuming this from meta tag
           data-ad-slot={slot}
           data-ad-format="auto"

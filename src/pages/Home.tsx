@@ -185,6 +185,51 @@ export default function Home() {
         </div>
       </section>
       
+      {/* COMPREHENSIVE GUIDE SECTION (For SEO & AdSense 'Thin Content' Compliance) */}
+      <section className="bg-white border-t border-gray-200 py-16 px-4 flex-shrink-0">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-10">
+            <h2 className="text-3xl font-black text-gray-900 tracking-tight mb-4">The Real Cost of Country Living</h2>
+            <div className="h-1 w-24 bg-[#1a5f3f] rounded-full"></div>
+          </div>
+          
+          <article className="prose prose-gray max-w-none text-gray-600 space-y-6">
+            <p className="text-lg leading-relaxed font-medium text-gray-700">
+              Moving to the country changes how you handle utilities. In the city, water and sewer are just monthly bills. In the country, you own the infrastructure. You are responsible for the well, the septic tank, and keeping the lights on.
+            </p>
+            
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Upfront Costs vs. Monthly Bills</h3>
+            <p className="leading-relaxed">
+              The biggest shock for new rural homeowners is the switch from monthly bills to massive upfront costs. Instead of a $60 water bill, you might spend $10,000 to drill a well. Your monthly bill drops to zero, but you take on all the maintenance and repair risks.
+            </p>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Managing Your Own Water and Waste</h3>
+            <p className="leading-relaxed">
+              When city sewer lines end, you are in charge of wastewater. Installing a septic system means soil tests, permits, and excavation. A failing septic tank is a costly emergency. 
+            </p>
+            <p className="leading-relaxed">
+              Our calculators help you budget for routine pumping and eventual replacements. If you can't drill a well, we also help you price out hauled water delivery and storage tanks.
+            </p>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Keeping the Lights On</h3>
+            <p className="leading-relaxed">
+              Rural power lines are exposed to weather and falling trees. Outages last longer. To keep your food cold and your well pump running, you need a backup plan.
+            </p>
+            <p className="leading-relaxed">
+              Whether you want a portable generator or a full off-grid solar setup, our tools help you forecast fuel costs and size your system correctly.
+            </p>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Why We Built This Site</h3>
+            <p className="leading-relaxed">
+              Standard mortgage calculators don't ask how much 2,000 feet of fencing costs. We built RuralUtilityCost.com to give you real, actionable estimates based on industry averages and contractor data.
+            </p>
+            <p className="leading-relaxed italic mt-4">
+              Knowledge is your best defense against unexpected costs. Plan your rural project with confidence.
+            </p>
+          </article>
+        </div>
+      </section>
+
       {/* FAQ SECTION */}
       <section className="bg-gray-50 border-t border-gray-200 py-16 px-4 flex-shrink-0">
         <div className="max-w-4xl mx-auto">
