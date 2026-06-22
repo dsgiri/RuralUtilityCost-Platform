@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { PortableText } from '@portabletext/react';
-import { getCalculatorContentByCode, CalculatorContent } from './calculatorSanityService';
-import { Info } from 'lucide-react';
+import { getCalculatorContentByCode, getRelatedCalculators, CalculatorContent } from './calculatorSanityService';
+import { Info, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface CalculatorSanityContentProps {
   uniqueCode: string;
@@ -9,6 +10,7 @@ interface CalculatorSanityContentProps {
 
 export const CalculatorSanityContent: React.FC<CalculatorSanityContentProps> = ({ uniqueCode }) => {
   const [content, setContent] = useState<CalculatorContent | null>(null);
+  const [related, setRelated] = useState<{title: string, slug: {current: string}}[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
@@ -20,6 +22,10 @@ export const CalculatorSanityContent: React.FC<CalculatorSanityContentProps> = (
         const data = await getCalculatorContentByCode(uniqueCode);
         if (data) {
           setContent(data);
+          if (data.subcategory) {
+            const relatedData = await getRelatedCalculators(data.subcategory, uniqueCode);
+            setRelated(relatedData);
+          }
         } else {
           // It's possible the CMS doesn't have the entry yet, just fail silently or show error fallback
           setError(true);
@@ -50,7 +56,7 @@ export const CalculatorSanityContent: React.FC<CalculatorSanityContentProps> = (
   }
 
   // Only render if we have at least one block of content
-  if (!content.howThisWorks?.length && !content.assumptions?.length) {
+  if (!content.howThisWorks?.length && !content.assumptions?.length && related.length === 0) {
     return null;
   }
 
@@ -78,6 +84,22 @@ export const CalculatorSanityContent: React.FC<CalculatorSanityContentProps> = (
           </div>
         </div>
       )}
+
+      {related && related.length > 0 && (
+        <div className="mb-4 pt-4 border-t border-gray-100">
+          <h4 className="text-sm font-bold text-gray-900 mb-3">Related Calculators in {content.subcategory}</h4>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {related.map((calc, idx) => (
+              <li key={idx}>
+                <Link to={`/${calc.slug.current}`} className="text-sm text-[#1a5f3f] hover:text-[#207a51] hover:underline flex items-center gap-1">
+                  {calc.title}
+                  <ExternalLink className="w-3 h-3" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       
       <div className="text-right">
         <span className="text-xs text-gray-400 font-mono tracking-wider" title="Calculator Reference Code">
@@ -87,3 +109,4 @@ export const CalculatorSanityContent: React.FC<CalculatorSanityContentProps> = (
     </div>
   );
 };
+
