@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { Target, Lightbulb, Calculator, CheckCircle2, ShieldCheck, Compass, Map, LineChart, Network, Github } from 'lucide-react';
-import { AdUnit } from '../components/AdUnit';
 
 export default function About() {
   return (
@@ -23,8 +22,6 @@ export default function About() {
           </p>
         </div>
       </section>
-
-      <AdUnit slot="about-header-ad" placement="header" />
 
       {/* Main Content */}
       <div className="flex-grow bg-slate-50 dark:bg-[#111827] py-16 px-4 sm:px-8 transition-colors">
@@ -156,8 +153,6 @@ export default function About() {
             </div>
           </div>
 
-          <AdUnit slot="about-mid-article-ad" placement="mid-article" />
-
           {/* Why Trust Us */}
           <div className="bg-[#1a5f3f] dark:bg-gray-800 rounded-3xl p-8 sm:p-12 text-white border border-transparent dark:border-gray-700 shadow-sm transition-colors">
             <h2 className="text-3xl font-bold mb-6 tracking-tight flex items-center gap-3">
@@ -270,8 +265,6 @@ export default function About() {
                Explore Calculators
              </Link>
           </div>
-
-          <AdUnit slot="about-in-content-ad" placement="in-content" />
 
         </div>
       </div>

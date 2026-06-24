@@ -1,7 +1,6 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 import { ExternalLink, Github, LayoutGrid, Tractor, Sprout, CloudRain, ShieldCheck, LineChart, Cpu, Warehouse, Banknote, Users, Trees, Droplets, Fish, Milk, Compass, PackageOpen, Globe, PenTool, Wrench } from 'lucide-react';
-import { AdUnit } from '../components/AdUnit';
 
 // Portfolio structure mapped from specifications
 const categories = [
@@ -99,8 +98,6 @@ export default function Portfolio() {
           </p>
         </div>
 
-        <AdUnit slot="portfolio-header-ad" placement="header" />
-
         {/* Global Stats or Vision Box */}
         <div className="mb-16 bg-[#1a5f3f] dark:bg-gray-800 rounded-2xl p-8 sm:p-10 text-white shadow-lg relative overflow-hidden">
            <div className="absolute top-0 right-0 p-12 opacity-10 pointer-events-none">
@@ -189,18 +186,9 @@ export default function Portfolio() {
                   </div>
                 ))}
               </div>
-              
-              {/* Inject mid-content ads periodically */}
-              {catIndex === 1 && (
-                <div className="mt-12">
-                   <AdUnit slot="portfolio-mid-article-ad" placement="mid-article" />
-                </div>
-              )}
             </section>
           ))}
         </div>
-
-        <AdUnit slot="portfolio-in-content-ad" placement="in-content" />
 
       </div>
     </div>

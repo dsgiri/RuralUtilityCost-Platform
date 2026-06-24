@@ -1,7 +1,6 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 import { Heart, Code2, Brain, Rocket, Database, Lock, Github, Search, FileText, Info } from 'lucide-react';
-import { AdUnit } from '../components/AdUnit';
 
 const techCredits = [
   {
@@ -85,8 +84,6 @@ export default function Credits() {
           </p>
         </div>
 
-        <AdUnit slot="credits-header-ad" placement="header" />
-
         {/* Technology Stack Grid */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
@@ -129,8 +126,6 @@ export default function Credits() {
             </p>
           </div>
         </div>
-
-        <AdUnit slot="credits-mid-article-ad" placement="mid-article" />
 
         {/* Content & Review Policy */}
         <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 sm:p-10 mb-8">
