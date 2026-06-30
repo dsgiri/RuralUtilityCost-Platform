@@ -41,8 +41,8 @@ export function A11yControls() {
 
           {/* Theme */}
           <div className="flex flex-col gap-2">
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Theme</label>
-            <div className="flex bg-gray-50 dark:bg-gray-900 p-1 rounded-lg border border-gray-200 dark:border-gray-700">
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider" id="theme-group-label">Theme</span>
+            <div className="flex bg-gray-50 dark:bg-gray-900 p-1 rounded-lg border border-gray-200 dark:border-gray-700" role="group" aria-labelledby="theme-group-label">
               <button 
                 onClick={() => setTheme('light')} 
                 className={`flex-1 flex justify-center items-center gap-1.5 py-1.5 text-xs font-medium rounded-md transition-all ${theme === 'light' ? 'bg-white shadow-sm text-[#1a5f3f]' : 'text-gray-500 hover:text-gray-900 dark:hover:text-white'}`}
@@ -60,8 +60,8 @@ export function A11yControls() {
 
           {/* Text Size */}
           <div className="flex flex-col gap-2">
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Text Size</label>
-            <div className="flex space-x-2">
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider" id="text-size-label">Text Size</span>
+            <div className="flex space-x-2" role="group" aria-labelledby="text-size-label">
               <button onClick={() => setFontSize('small')} className={`flex-1 py-1.5 rounded border text-xs font-medium ${fontSize === 'small' ? 'bg-[#1a5f3f] text-white border-[#1a5f3f]' : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'}`}>A-</button>
               <button onClick={() => setFontSize('normal')} className={`flex-1 py-1.5 rounded border text-xs font-medium ${fontSize === 'normal' ? 'bg-[#1a5f3f] text-white border-[#1a5f3f]' : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'}`}>A</button>
               <button onClick={() => setFontSize('large')} className={`flex-1 py-1.5 rounded border text-md font-medium ${fontSize === 'large' ? 'bg-[#1a5f3f] text-white border-[#1a5f3f]' : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'}`}>A+</button>
@@ -75,6 +75,7 @@ export function A11yControls() {
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">High Contrast</span>
               <input 
                 type="checkbox" 
+                aria-label="Toggle High Contrast"
                 className="sr-only peer" 
                 checked={contrast === 'high'}
                 onChange={(e) => setContrast(e.target.checked ? 'high' : 'normal')}
@@ -86,6 +87,7 @@ export function A11yControls() {
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">Reduced Motion</span>
               <input 
                 type="checkbox" 
+                aria-label="Toggle Reduced Motion"
                 className="sr-only peer"
                 checked={motion === 'reduced'}
                 onChange={(e) => setMotion(e.target.checked ? 'reduced' : 'normal')} 

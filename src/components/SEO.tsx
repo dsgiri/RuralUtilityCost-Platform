@@ -5,14 +5,15 @@ interface SEOProps {
   title: string;
   description: string;
   url?: string;
+  path?: string;
   schema?: any;
   jsonLd?: any;
   keywords?: string[];
 }
 
-export function SEO({ title, description, url, schema, jsonLd, keywords }: SEOProps) {
+export function SEO({ title, description, url, path, schema, jsonLd, keywords }: SEOProps) {
   const location = useLocation();
-  const currentUrl = url || location.pathname;
+  const currentUrl = url || path || location.pathname;
   const structuredData = schema || jsonLd;
 
   return (

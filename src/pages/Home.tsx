@@ -65,6 +65,7 @@ export default function Home() {
             <input
               type="text"
               placeholder="Search tools, features, keywords..."
+              aria-label="Search tools"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="block w-full pl-14 pr-6 py-4 border-2 border-gray-100 rounded-2xl focus:ring-[#1a5f3f] focus:border-[#1a5f3f] text-gray-900 placeholder-gray-400 text-lg shadow-sm hover:shadow-md transition-shadow bg-white"

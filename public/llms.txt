@@ -1,0 +1,17 @@
+# Rural Utility Cost Calculator
+> Free tools and calculators for rural living, property development, and farm management.
+
+This site provides calculators to estimate costs for:
+- Property & Construction (Land value, Septic, Fencing, Well drilling, etc.)
+- Energy & Utilities (Generators, Solar, Internet, Cable, Propane)
+- Animal & Farm (Input costs, Livestock, Gestation, Meat Yield, Honey, etc.)
+- Business & Profit (Pain point priority, Cut cost, Processing compliance)
+- Farm Finance & Loans (Loan payment, Equipment payment, Land affordability)
+
+All calculators are interactive client-side tools built with React.
+
+## Navigation
+- Home: /
+- Calculators: available via navigation menu or search on the homepage
+- Articles & Guides: /articles
+- About: /about

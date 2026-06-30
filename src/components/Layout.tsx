@@ -186,6 +186,7 @@ export function Layout({ children }: { children: ReactNode }) {
             <input
               type="text"
               placeholder="Search tools..."
+              aria-label="Search sidebar tools"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-9 pr-3 py-2 bg-black/20 border border-white/10 rounded-lg text-sm text-white placeholder-white/70 focus:outline-none focus:ring-1 focus:ring-green-400 focus:border-green-400 transition-colors"
