@@ -3,7 +3,7 @@ import { GrowthInput, GrowthResult } from './calculator';
 export function generateChartData(input: GrowthInput, result: GrowthResult) {
   const { currentWeight, previousWeight, daysBetween, targetWeight, futureDays } = input;
   
-  const data = [
+  const data: { day: number; weight: number; isProjection?: boolean }[] = [
     { day: 0, weight: previousWeight },
     { day: daysBetween, weight: currentWeight }
   ];

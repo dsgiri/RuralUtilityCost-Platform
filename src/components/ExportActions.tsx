@@ -4,19 +4,22 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
 interface ExportActionsProps {
-  title: string;
-  data: Record<string, string | number>;
+  title?: string;
+  data?: Record<string, string | number>;
   targetRef?: React.RefObject<HTMLElement>;
+  [key: string]: any;
 }
 
-export function ExportActions({ title, data, targetRef }: ExportActionsProps) {
+export function ExportActions({ title, data, targetRef, ...rest }: ExportActionsProps) {
   const [copied, setCopied] = useState(false);
   const [isExportingPDF, setIsExportingPDF] = useState(false);
 
   const getFormatString = () => {
-    let str = `--- ${title.toUpperCase()} ---\n\n`;
+    const safeTitle = title || rest.calculatorName || 'Calculator';
+    let str = `--- ${safeTitle.toUpperCase()} ---\n\n`;
     str += `Date: ${new Date().toLocaleString()}\n\n`;
-    Object.entries(data).forEach(([key, value]) => {
+    const safeData = data || { ...rest.inputs, ...rest.results } || {};
+    Object.entries(safeData).forEach(([key, value]) => {
       str += `${key}: ${value}\n`;
     });
     return str;
@@ -59,7 +62,8 @@ export function ExportActions({ title, data, targetRef }: ExportActionsProps) {
       });
       
       pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
-      pdf.save(`${title.replace(/\s+/g, '-').toLowerCase()}-${new Date().toISOString().split('T')[0]}.pdf`);
+      const safeTitle = title || rest.calculatorName || 'Calculator';
+      pdf.save(`${safeTitle.replace(/\s+/g, '-').toLowerCase()}-${new Date().toISOString().split('T')[0]}.pdf`);
     } catch (e) {
       console.error('PDF export failed', e);
       alert('Failed to generate PDF. Please try Print -> Save to PDF.');
@@ -71,18 +75,20 @@ export function ExportActions({ title, data, targetRef }: ExportActionsProps) {
   const handleDownloadCSV = () => {
     let csv = `Calculator,Timestamp,Parameter,Value\n`;
     const timestamp = new Date().toISOString();
+    const safeTitle = title || rest.calculatorName || 'Calculator';
+    const safeData = data || { ...rest.inputs, ...rest.results } || {};
     
-    Object.entries(data).forEach(([key, value]) => {
+    Object.entries(safeData).forEach(([key, value]) => {
       const safeKey = `"${key.replace(/"/g, '""')}"`;
       const safeValue = `"${String(value).replace(/"/g, '""')}"`;
-      csv += `"${title}","${timestamp}",${safeKey},${safeValue}\n`;
+      csv += `"${safeTitle}","${timestamp}",${safeKey},${safeValue}\n`;
     });
 
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `${title.replace(/\s+/g, '-').toLowerCase()}-${new Date().toISOString().split('T')[0]}.csv`;
+    link.download = `${safeTitle.replace(/\s+/g, '-').toLowerCase()}-${new Date().toISOString().split('T')[0]}.csv`;
     link.style.display = 'none';
     document.body.appendChild(link);
     link.click();

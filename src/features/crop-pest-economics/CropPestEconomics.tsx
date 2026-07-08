@@ -49,34 +49,38 @@ export default function CropPestEconomics() {
         
         {/* Help/FAQ */}
         <div className="mt-16 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Decision Support Fundamentals</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Frequently Asked Questions</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">1. Understand the Loss</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-1">How do I interpret Yield Loss?</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Before applying costly treatments, use the <strong>Yield-Loss Estimator</strong> to translate physical pest damage into dollars per acre. If the expected dollar loss is smaller than the cost to spray, treatment may not be mathematically justified.
               </p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">2. Find the Threshold</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-1">What is an Economic Threshold?</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 The <strong>Economic Threshold Tool</strong> calculates the specific pest density where treating breaks even. Finding this "Action Point" allows you to spray before pests reach the Economic Injury Level (the point of direct revenue loss).
               </p>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">3. Time the Application</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-1">How does Degree-Day timing work?</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Spraying at the wrong insect life stage is wasted money. Use the <strong>Degree-Day Timing Tool</strong> to track heat accumulation. This tracks biological pest development so you can intervene exactly when insects are most vulnerable.
               </p>
             </div>
 
-            <div className="md:col-span-3 pt-4 border-t border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Disclaimers & Limitations</h3>
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-1">What are the formulas and assumptions behind these tools? (Logic)</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                These tools provide theoretical economic baseline estimates based purely on user inputs. They cannot account for sudden weather shifts, secondary pest outbreaks, pesticide resistance, or complex biological interactions. These tools do not replace hands-on field scouting or advice from certified crop advisors and extension services.
+                These tools provide theoretical economic baseline estimates based purely on user inputs. 
+                <br/><strong>Yield Loss Logic:</strong> <code>Potential Value = Target Yield × Expected Crop Price</code>. The estimated loss is the percentage of damage applied to that potential value.
+                <br/><strong>Economic Threshold Logic:</strong> <code>Threshold = Treatment Cost / Value of Yield Saved per Pest Unit</code>
+                <br/><strong>Degree-Day Logic:</strong> <code>Daily Accumulation = ((Max Temp + Min Temp) / 2) - Base Temp</code>. Max temperatures are capped at the Upper Threshold to account for pest development stalling in extreme heat.
+                <br/>They cannot account for sudden weather shifts, secondary pest outbreaks, pesticide resistance, or complex biological interactions. These tools do not replace hands-on field scouting or advice from certified crop advisors and extension services.
               </p>
             </div>
           </div>

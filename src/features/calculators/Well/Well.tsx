@@ -73,13 +73,21 @@ export default function Well() {
   };
 
   return (
-    <div className="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <div className="p-4 sm:p-6">
       <SEO 
         title="Well Drilling Cost Calculator | Rural Utility Cost"
         description="Calculate the cost per foot of drilling a water well based on geological conditions and depth requirements."
         jsonLd={jsonLd}
       />
       
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Well Drilling Cost Calculator</h1>
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
+          Calculate the cost per foot of drilling a water well based on geological conditions and depth requirements.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* LEFT: CALCULATOR INPUTS */}
       <section className="lg:col-span-4 bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex flex-col gap-4">
         <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Configuration</h3>
@@ -182,7 +190,13 @@ export default function Well() {
         />
 
         {/* AI-FRIENDLY FAQ SECTION */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 print:hidden">
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 print:hidden mt-4">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Formula & Assumptions</h2>
+          <div className="text-sm text-gray-600 space-y-2 mb-8">
+            <p><strong>Logic:</strong> <code>Drilling Cost = Depth × (Base Rate × Soil Multiplier × Regional Multiplier)</code>. <code>Total Cost = Drilling Cost + Pump System Cost</code>.</p>
+            <p>The base rate adjusts dynamically based on the resistance of the selected geology. Deeper wells automatically trigger higher pump system costs, as they require more powerful submersible pumps, thicker wiring gauges to prevent voltage drop, and heavier drop piping.</p>
+          </div>
+
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
           <div className="space-y-6">
             <div>
@@ -217,6 +231,7 @@ export default function Well() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

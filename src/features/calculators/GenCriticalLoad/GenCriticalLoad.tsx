@@ -170,6 +170,32 @@ export default function GenCriticalLoad() {
             </div>
           </div>
           
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-8 print:hidden">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
+            <div className="space-y-4 text-sm text-gray-600">
+              <p>
+                <strong>Logic:</strong> <code>Utilization = Critical Load / Generator Capacity</code>. <code>Runtime = Available Fuel / Burn Rate</code>.
+              </p>
+              <p>
+                The estimated burn rate assumes fuel consumption scales linearly with load (e.g., a generator at 50% load burns roughly 50% of its max fuel rate). In reality, most generators have a baseline burn rate just to run the engine, meaning lightly loaded generators are less fuel-efficient per kW generated. The starting wattage surges required by motors (well pumps, refrigerators) are not calculated here—ensure your generator has a starting surge rating higher than your running load.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Frequently Asked Questions</h3>
+            <div className="space-y-4 text-sm text-gray-600">
+              <div>
+                <h4 className="font-bold text-gray-800">Why shouldn't I run my generator at 100% capacity?</h4>
+                <p className="mt-1">Running a generator at its maximum rated capacity for extended periods can cause overheating and premature engine wear. Most manufacturers recommend sizing a generator so your critical load uses about 50-80% of its maximum capacity.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-800">Do I need to run everything at once?</h4>
+                <p className="mt-1">No. In an emergency, load management is key. You can run a smaller, more fuel-efficient generator if you cycle your heavy loads (e.g., turn off the well pump before turning on the electric stove).</p>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8 mt-8">
             <h3 className="text-lg font-bold text-gray-900 mb-2">Build Your Full Rural Power Plan</h3>
             <p className="text-gray-600 mb-4">
@@ -248,15 +274,40 @@ export default function GenCriticalLoad() {
               </p>
             </div>
 
-            <button
-              onClick={handleReset}
-              className="mt-6 w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-medium transition-colors flex items-center justify-center gap-2"
-            >
-              <RotateCcw className="w-4 h-4" />
-              Reset Defaults
-            </button>
           </div>
         </div>
+        
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-8 print:hidden">
+          <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
+          <div className="space-y-4 text-sm text-gray-600">
+            <p><strong>Logic:</strong> Generator burn rate is not linear. Running a generator at 10% load still burns fuel to spin the heavy alternator. This calculator uses an industry-standard parabolic curve where <code>Estimated Burn Rate = Max Burn Rate × (0.2 + 0.8 × (Load Percentage))</code>.</p>
+            <p><strong>Fuel Multipliers (gallons per hour per kW at 100% load):</strong></p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Diesel: 0.075</li>
+              <li>Gasoline: 0.11</li>
+              <li>Propane: 0.14</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">What happens if my generator is overloaded?</h3>
+              <p className="text-gray-600 mb-2">
+                If the critical load exceeds the generator's size rating (running watts), the generator's breaker will trip, shutting off power to protect the alternator from burning out. You must either upgrade the generator size or turn off non-essential appliances.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">How can I extend my fuel runtime?</h3>
+              <p className="text-gray-600 mb-2">
+                Turn off high-draw appliances when not actively needed. For example, turn off the water heater breaker until 30 minutes before showering. Because the burn rate curve drops as load drops, managing your load extends fuel life significantly.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

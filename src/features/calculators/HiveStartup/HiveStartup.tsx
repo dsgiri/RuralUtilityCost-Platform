@@ -250,15 +250,47 @@ export default function HiveStartup() {
               </p>
             </div>
 
-            <button
-              onClick={handleReset}
-              className="mt-6 w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-medium transition-colors flex items-center justify-center gap-2"
-            >
-              <RotateCcw className="w-4 h-4" />
-              Reset Defaults
-            </button>
           </div>
         </div>
+        
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-8 print:hidden">
+          <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
+          <div className="space-y-4 text-sm text-gray-600">
+            <p><strong>Logic:</strong> <code>Startup Cost = (Variable Costs × Number of Hives) + Fixed Costs + Contingency</code></p>
+            <p><strong>Variable Costs (Per Hive):</strong></p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Hive Hardware (Boxes, Frames, Bottom Board, Covers)</li>
+              <li>Bees (Packages or Nucs)</li>
+              <li>Feeders</li>
+            </ul>
+            <p><strong>Fixed Costs (Once):</strong></p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Protective Gear (Suit, Gloves)</li>
+              <li>Tools (Smoker, Hive Tool, Brush)</li>
+              <li>Mite Treatments</li>
+              <li>Shipping & Miscellaneous</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Why should I start with two hives instead of one?</h3>
+              <p className="text-gray-600 mb-2">
+                Starting with two hives allows you to compare their progress. If one hive is weak or loses its queen, you can transfer resources (like brood or honey frames) from the strong hive to save the weak one. A single hive leaves you with no backup.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Why isn't honey extraction equipment included?</h3>
+              <p className="text-gray-600 mb-2">
+                First-year beekeepers rarely harvest enough honey to justify buying expensive extraction equipment (extractors, uncapping tanks, bottling gear). Most beginners rent extractors from their local beekeeping club or borrow from a mentor.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

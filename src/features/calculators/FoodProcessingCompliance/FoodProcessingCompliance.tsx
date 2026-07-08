@@ -507,26 +507,35 @@ export default function FoodProcessingCompliance() {
           </div>
           
           {/* Support Content */}
-          <div className="mt-8 bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-200 dark:border-gray-700">
-            <h3 className="flex items-center gap-2 font-bold text-gray-900 dark:text-gray-100 mb-4 text-base">
-              <Info className="w-5 h-5 text-[#1a5f3f]" />
-              How it works
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-600 dark:text-gray-400">
+          <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6 print:hidden">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
+            <div className="space-y-4 text-sm text-gray-600">
+              <p><strong>Organic Certification Costs:</strong> This tool estimates baseline averages for typical certification agencies (e.g. CCOF, OEFFA, Oregon Tilth). Unannounced inspections or distant rural travel may incur additional inspector travel fees.</p>
+              <p><strong>Cost Share:</strong> The USDA FSA Cost Share program may rebate up to 75% of your eligible certification costs (up to $750 max limits per scope), strictly after you have paid the agency and achieved certification.</p>
+              <p><strong>Organic Labeling Requirements (NOP):</strong></p>
+              <ul className="list-disc pl-5 space-y-2 mt-2">
+                <li><strong>100% Organic:</strong> May use USDA seal. All ingredients and processing aids must be organic.</li>
+                <li><strong>Organic (95%+):</strong> May use USDA seal. Up to 5% non-organic ingredients from the National List.</li>
+                <li><strong>Made with Organic (70-94%):</strong> Cannot use USDA seal. Can state "Made with organic [up to 3 ingredients]."</li>
+                <li><strong>Below 70%:</strong> No organic claims on the principal display panel. Specific ingredients can be noted as organic in the info panel.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 p-6 print:hidden">
+            <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <div className="space-y-6">
               <div>
-                <h4 className="font-bold text-gray-800 dark:text-gray-200 mb-2">Organic Certification Costs:</h4>
-                <p className="mb-2">This tool estimates baseline averages for typical certification agencies (e.g. CCOF, OEFFA, Oregon Tilth). Unannounced inspections or distant rural travel may incur additional inspector travel fees.</p>
-                <p>The USDA FSA Cost Share program may rebate up to 75% of your eligible certification costs (up to $750 max limits per scope), strictly after you have paid the agency and achieved certification.</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I sell my product before it's certified?</h3>
+                <p className="text-gray-600 mb-2">
+                  Yes, but you cannot legally market it as "Organic" or use the USDA Organic seal until your certification is officially granted. Doing so without certification can result in hefty fines.
+                </p>
               </div>
               <div>
-                <h4 className="font-bold text-gray-800 dark:text-gray-200 mb-2">Organic Labeling Requirements (NOP):</h4>
-                <ul className="space-y-1 list-disc pl-4 marker:text-[#1a5f3f]">
-                  <li><strong>100% Organic:</strong> May use USDA seal. All ingredients and processing aids must be organic.</li>
-                  <li><strong>Organic (95%+):</strong> May use USDA seal. Up to 5% non-organic ingredients from the National List.</li>
-                  <li><strong>Made with Organic (70-94%):</strong> Cannot use USDA seal. Can state "Made with organic [up to 3 ingredients]."</li>
-                  <li><strong>Below 70%:</strong> No organic claims on the principal display panel. Specific ingredients can be noted as organic in the info panel.</li>
-                </ul>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Are water and salt considered organic?</h3>
+                <p className="text-gray-600 mb-2">
+                  No, water and salt are considered non-agricultural and are excluded from the organic percentage calculation when determining label claims.
+                </p>
               </div>
             </div>
           </div>

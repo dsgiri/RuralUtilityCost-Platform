@@ -255,6 +255,34 @@ export default function MeatCostPerLb() {
           </div>
         </div>
       </div>
+      
+      <div className="mt-8 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm print:hidden">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Formula & Assumptions</h2>
+        <div className="space-y-4 text-sm text-gray-600">
+          <p><strong>Logic:</strong> This calculator aggregates all input costs associated with raising an animal from purchase to freezer.</p>
+          <p><code>Total Cost = Purchase Cost + Feed + Processing + Transport + Misc</code></p>
+          <p><code>Break-Even Per Lb = Total Cost ÷ Total Take-Home Yield (lbs)</code></p>
+          <p><strong>Assumption:</strong> The "Take-Home Yield" refers to the boxed, wrapped weight you put in the freezer or sell to the customer, not the live weight or hanging weight. The profit calculation assumes 100% of the take-home yield is sold at your stated average price.</p>
+        </div>
+      </div>
+
+      <div className="mt-6 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm print:hidden">
+        <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Why is my break-even cost so high?</h3>
+            <p className="text-gray-600">
+              When farmers first run these numbers, they are often shocked at how high their true break-even cost is. Processing fees usually account for a massive chunk of the final cost, and small-scale producers often pay retail prices for feed.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Should I charge based on hanging weight or packaged weight?</h3>
+            <p className="text-gray-600">
+              It depends on your business model. Selling "freezer beef" (halves or quarters) is legally required in many states to be sold by the <em>hanging weight</em> prior to processing. However, if you are selling individual cuts at a farmers market (which requires USDA processing), you must price based on the <em>packaged weight</em>.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

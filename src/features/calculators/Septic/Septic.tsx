@@ -66,13 +66,21 @@ export default function Septic() {
   };
 
   return (
-    <div className="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <div className="p-4 sm:p-6">
       <SEO 
         title="Septic Tank Size Calculator | Rural Utility Cost"
         description="Calculate the required septic tank size based on the number of bedrooms and soil type for residential rural properties."
         jsonLd={jsonLd}
       />
       
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Septic Tank Size Calculator</h1>
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
+          Calculate the required septic tank size based on the number of bedrooms and soil type for residential rural properties.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* LEFT: CALCULATOR INPUTS */}
       <section className="lg:col-span-4 bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex flex-col gap-4">
         <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Configuration</h3>
@@ -177,6 +185,11 @@ export default function Septic() {
 
         {/* AI-FRIENDLY FAQ & HOW IT WORKS */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-4 print:hidden">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Formula & Assumptions</h2>
+          <div className="text-sm text-gray-600 space-y-2 mb-8">
+            <p><strong>Logic:</strong> Most environmental codes mandate a minimum 1,000-gallon tank for up to 3 bedrooms, adding 250 gallons for each additional bedroom. Poor soil conditions require a 25% larger tank to increase settling time and reduce strain on the drain field.</p>
+          </div>
+
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
           <div className="space-y-6">
             <div>
@@ -211,6 +224,7 @@ export default function Septic() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

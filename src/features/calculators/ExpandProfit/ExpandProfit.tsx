@@ -151,17 +151,21 @@ export default function ExpandProfit() {
             </div>
           </div>
 
-          <div className="mt-12 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">How to Grow Profit Faster</h2>
+          <div className="mt-12 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Formula & Assumptions</h2>
             
             <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
+              <p><strong>Logic:</strong> <code>Required Revenue = Expenses + Target Profit</code>. <code>Revenue Increase Needed = Required Revenue - Current Revenue</code>.</p>
               <p>For rural and local businesses, increasing profit often means optimizing pricing, finding new markets, or adding higher-margin services without increasing overhead.</p>
               
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Revenue vs. Profit</h3>
               <p>It's vital to remember that a $1,000 increase in sales does not mean a $1,000 increase in your bank account. Depending on your margins, it may only yield $100 to $300 in actual take-home profit. That's why planning based on your <i>target profit</i> is much more effective than just chasing top-line sales.</p>
+            </div>
+          </div>
 
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Frequently Asked Questions</h3>
-              
+          <div className="mt-6 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Frequently Asked Questions</h2>
+            <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
               <div className="space-y-6">
                 <div>
                   <h4 className="font-bold text-gray-900 dark:text-gray-100">How can I increase revenue without advertising?</h4>
@@ -177,22 +181,22 @@ export default function ExpandProfit() {
                 </div>
               </div>
             </div>
+          </div>
 
-            <CalculatorSanityContent uniqueCode="CALC-BIZ-402" />
+          <CalculatorSanityContent uniqueCode="CALC-BIZ-402" />
 
           <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Build Your Rural Business Plan</h3>
-              <p className="text-gray-600 mb-4">
-                Find matching grants, calculate expansion ROI, and ensure food processing compliance.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a href="/agribusiness" className="inline-flex items-center justify-center px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors shadow-sm">
-                  Return to Agribusiness Hub
-                </a>
-                <a href="/cut-cost" className="inline-flex items-center text-emerald-600 font-medium hover:text-emerald-700">
-                  Calculate Savings →
-                </a>
-              </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-2">Build Your Rural Business Plan</h3>
+            <p className="text-gray-600 mb-4">
+              Find matching grants, calculate expansion ROI, and ensure food processing compliance.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a href="/agribusiness" className="inline-flex items-center justify-center px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors shadow-sm">
+                Return to Agribusiness Hub
+              </a>
+              <a href="/cut-cost" className="inline-flex items-center text-emerald-600 font-medium hover:text-emerald-700">
+                Calculate Savings →
+              </a>
             </div>
           </div>
 

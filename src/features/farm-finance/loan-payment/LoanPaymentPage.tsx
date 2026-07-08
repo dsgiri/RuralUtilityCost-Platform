@@ -258,10 +258,24 @@ export default function LoanPaymentPage() {
 
                 {/* Calculation Info Card */}
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">About This Calculation</h3>
+                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Formula & Assumptions</h3>
                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                     This calculator estimates repayment based on the provided inputs. It assumes interest compounds per payment period. Real agricultural loans may include origination fees, closing costs, or variable rates that are not reflected here. This is an educational estimate and not an official offer of credit.
+                     This calculator estimates repayment based on standard compounding interest logic where interest compounds per payment period. Real agricultural loans may include origination fees, closing costs, or variable rates that are not reflected here. This is an educational estimate and not an official offer of credit.
                    </p>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Frequently Asked Questions</h2>
+                  <div className="space-y-6 text-sm">
+                    <div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">Why would I choose annual or semi-annual payments?</h3>
+                      <p className="text-gray-600 dark:text-gray-400 mt-1">Unlike residential mortgages which are almost always monthly, farm operating loans and land loans are often structured around harvest schedules. If your primary revenue comes once a year when crops are sold or calves are weaned, an annual payment structure aligns your debt obligations with your cash flow.</p>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">What is a fixed principal loan?</h3>
+                      <p className="text-gray-600 dark:text-gray-400 mt-1">In a fixed principal loan, you pay the exact same amount of principal every period, plus whatever interest has accrued on the remaining balance. Your first payment will be the largest, and subsequent payments will steadily decline as the interest burden shrinks. This pays less total interest over the life of the loan compared to standard amortization.</p>
+                    </div>
+                  </div>
                 </div>
               </>
             )}

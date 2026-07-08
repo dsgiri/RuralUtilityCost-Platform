@@ -75,27 +75,30 @@ export default function FarmInputCost() {
         
         {/* Help/FAQ */}
         <div className="mt-16 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">How to Use These Tools</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Frequently Asked Questions</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Fertilizer Calculator</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-1">How does the Fertilizer Calculator work?</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Enter your product details to see the raw cost per acre and total field cost. If you provide a nutrient analysis (N-P-K-S), the calculator will estimate the effective price you are paying per pound of actual nutrient—helpful for comparing different analysis blends side-by-side.
               </p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Seed Calculator</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-1">How does the Seed Calculator work?</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Whether planting row crops (by the bag) or broadcasting pasture cover (by the pound), use this tool to estimate exactly how many units you need to buy and what the field will cost. Adjusting the seeding rate directly updates the per-acre cost.
               </p>
             </div>
 
-            <div className="md:col-span-2">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Disclaimers & Limitations</h3>
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-1">What are the formulas and assumptions behind these tools? (Logic)</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                These calculators provide mathematical estimates based purely on the inputs supplied. They do not account for variable rate application adjustments, application machinery costs, soil tie-up parameters, or discounts/rebates obtained through personal vendor relationships. The Spot Rate trend data is explicitly for demonstration and should not be used as official financial market quotes.
+                These calculators provide mathematical estimates based purely on the inputs supplied. 
+                <br/><strong>Seed Logic:</strong> <code>Total Cost = (Acres × Seeding Rate) / Units Per Bag × Price</code>
+                <br/><strong>Fertilizer Logic:</strong> <code>Total Cost = (Acres × Application Rate) × Price</code>
+                <br/>They do not account for variable rate application adjustments, application machinery costs, soil tie-up parameters, or discounts/rebates obtained through personal vendor relationships.
               </p>
             </div>
           </div>

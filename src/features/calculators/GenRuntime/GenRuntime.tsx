@@ -220,7 +220,19 @@ export default function GenRuntime() {
           </div>
           
           
-          <div className="bg-white border border-gray-200 rounded-xl p-6 mb-8 mt-8">
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-8 print:hidden">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
+            <div className="space-y-4 text-sm text-gray-600">
+              <p>
+                <strong>Logic:</strong> <code>Available Fuel = Tank Size × (Fill Level / 100)</code>. <code>Runtime = Available Fuel / Burn Rate</code>.
+              </p>
+              <p>
+                The auto-estimated burn rate uses industry-standard multiplier logic (varying by fuel type) to approximate fuel consumption based on the generator's size and the active load. For example, a generator running at 50% load does not burn exactly half the fuel of one running at 100%, as the engine must burn a base amount of fuel just to spin at the required 3600 RPM to produce stable power.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-xl p-6 mb-8 mt-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
             
             <div className="space-y-6">

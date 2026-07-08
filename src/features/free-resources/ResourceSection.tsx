@@ -5,6 +5,7 @@ import { ResourceCard } from './ResourceCard';
 interface ResourceSectionProps {
   title: string;
   resources: Resource[];
+  key?: React.Key;
 }
 
 export function ResourceSection({ title, resources }: ResourceSectionProps) {

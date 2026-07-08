@@ -44,7 +44,7 @@ export default function FillDirt() {
   const results = calculate();
 
   return (
-    <div className="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <div className="p-4 sm:p-6">
       <SEO 
         title="Fill Dirt Cost & Volume Calculator"
         description="Calculate cubic yards, tons, and cost of fill dirt required for grading, leveling, and rural construction."
@@ -57,6 +57,14 @@ export default function FillDirt() {
         }}
       />
       
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Fill Dirt Cost & Volume Calculator</h1>
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
+          Calculate cubic yards, tons, and cost of fill dirt required for grading, leveling, and rural construction.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* LEFT: CALCULATOR INPUTS */}
       <section className="lg:col-span-4 bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex flex-col gap-4">
         <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Configuration</h3>
@@ -164,25 +172,34 @@ export default function FillDirt() {
           }}
         />
 
-        {/* SEO SNIPPET / FAQ */}
-        <div className="bg-[#1a5f3f]/5 rounded-xl border border-[#1a5f3f]/10 p-5 flex flex-col md:flex-row gap-8">
-          <div className="flex-1">
-            <h4 className="text-xs font-bold text-[#1a5f3f] mb-2 uppercase">Guide: Dirt Volumes</h4>
-            <div className="text-[11px] leading-relaxed text-gray-700 space-y-2">
-              <p>Volumes are measured in cubic yards (occupational space), but trucking is billed by weight (tons). Due to soil density, 1 cubic yard translates to roughly 1.4 tons.</p>
-              <p>Prices vary by proximity to excavation sources. In 2026, low-cost rural areas avg $15/ton, whereas urban/high-cost regions easily reach $40/ton prior to long-haul delivery fees.</p>
-            </div>
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-8 print:hidden">
+          <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
+          <div className="space-y-4 text-sm text-gray-600">
+            <p>Volumes are measured in cubic yards (occupational space), but trucking is billed by weight (tons). Due to soil density, 1 cubic yard translates to roughly 1.4 tons.</p>
+            <p><strong>Logic:</strong> <code>Cubic Yards = (Length × Width × Depth in feet) / 27</code>. <code>Tons = Cubic Yards × 1.4</code>.</p>
+            <p>Prices vary by proximity to excavation sources. In 2026, low-cost rural areas avg $15/ton, whereas urban/high-cost regions easily reach $40/ton prior to long-haul delivery fees.</p>
           </div>
-          <div className="hidden md:block w-px bg-[#1a5f3f]/10"></div>
-          <div className="flex-1">
-            <h4 className="text-xs font-bold text-[#1a5f3f] mb-2 uppercase">FAQ Quick Answers</h4>
-            <ul className="text-[11px] space-y-2 text-gray-600">
-              <li><strong>Clean Fill Definition:</strong> Fill devoid of hazardous junk, asphalt chunks, and metal.</li>
-              <li><strong>Truck Capacity:</strong> Most dump trucks manage about 12 tons at max payload per regional DOT limits.</li>
-            </ul>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">What is Clean Fill?</h3>
+              <p className="text-gray-600 mb-2">
+                Clean fill is dirt that is devoid of hazardous junk, asphalt chunks, and metal. It is generally safe for grading and construction use.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">How much can a standard dump truck carry?</h3>
+              <p className="text-gray-600 mb-2">
+                Most standard dump trucks manage about 12 tons at max payload per regional DOT limits.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

@@ -206,15 +206,36 @@ export default function HoneyYield() {
               </p>
             </div>
 
-            <button
-              onClick={handleReset}
-              className="mt-6 w-full py-3 bg-white outline outline-1 outline-amber-200 hover:bg-amber-100 text-amber-900 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
-            >
-              <RotateCcw className="w-4 h-4" />
-              Reset Defaults
-            </button>
           </div>
         </div>
+        
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-8 print:hidden">
+          <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
+          <div className="space-y-4 text-sm text-gray-600">
+            <p><strong>Logic:</strong> <code>Net Harvest = (Colonies × Honey Per Hive × Harvests) × (Success Factor) - (Reserve Percentage)</code></p>
+            <p><strong>Yield Estimates:</strong> Yields are highly variable based on location and weather. A typical established hive might produce 40-60 lbs of surplus honey in a moderate year, but first-year hives often produce zero surplus as they focus on drawing out wax comb.</p>
+            <p><strong>Overwintering Reserves:</strong> A colony needs between 60 to 100 lbs of its own honey to survive a cold winter. Taking too much honey requires feeding them sugar syrup, which is an added expense and labor.</p>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">When do I harvest honey?</h3>
+              <p className="text-gray-600 mb-2">
+                Usually in late summer or early fall after the primary nectar flow has ended. In some warmer climates with multiple distinct flows, beekeepers might harvest in late spring and again in the fall.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">What is the "Success Factor"?</h3>
+              <p className="text-gray-600 mb-2">
+                Not all hives produce equally. Swarming, queen issues, or mite loads can drastically reduce a hive's production. The success factor allows you to account for average colony losses or underperformance across your apiary.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

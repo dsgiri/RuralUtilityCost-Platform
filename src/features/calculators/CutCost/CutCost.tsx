@@ -156,17 +156,20 @@ export default function CutCost() {
             </div>
           </div>
 
-          <div className="mt-12 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">How to Reduce Business Expenses</h2>
+          <div className="mt-8 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Formula & Assumptions</h2>
             
             <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
-              <p>Trimming excess costs is the fastest way to increase profitability, especially for rural or local service businesses where revenue naturally fluctuates by season.</p>
+              <p><strong>Logic:</strong> Trimming excess costs is the fastest way to increase profitability. <code>Required Expenses = Current Revenue - Target Profit</code>.</p>
               
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Cost Cutting vs. Revenue Growth</h3>
               <p>To increase your profit by $1,000, you can either cut $1,000 in expenses, or increase sales by an amount that leaves $1,000 after paying the costs of delivering those sales (variable costs). If your profit margin is 20%, you'd need $5,000 in new revenue to get the same $1,000 profit you'd get from simple cost cutting.</p>
+            </div>
+          </div>
 
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Frequently Asked Questions</h3>
-              
+          <div className="mt-6 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Frequently Asked Questions</h2>
+            <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
               <div className="space-y-6">
                 <div>
                   <h4 className="font-bold text-gray-900 dark:text-gray-100">Where should I start cutting costs?</h4>

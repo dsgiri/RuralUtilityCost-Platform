@@ -293,10 +293,11 @@ export default function GrantFinder() {
             </div>
           </div>
 
-          <div className="mt-12 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">How to Find Business Grants & Assistance</h2>
+          <div className="mt-12 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Formula & Assumptions</h2>
             
             <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
+              <p><strong>Logic:</strong> This tool uses a simplified matching algorithm to map your business type and intended purpose against a static database of common federal grant and loan programs.</p>
               <p>Navigating government aid can be confusing. It is crucial to manage expectations: very few "free money" grants exist just for starting a standard for-profit business. Most grants are highly conditional, matching-fund based, or restricted to specific activities like technical innovation or rural revitalization.</p>
               
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">What funding may fit your business</h3>
@@ -305,9 +306,12 @@ export default function GrantFinder() {
                 <li><strong>Value-Added Agriculture:</strong> Specialized grants for farmers turning raw commodities into consumer goods (like turning milk into artisan cheese).</li>
                 <li><strong>Disaster Recovery:</strong> Following natural disasters, FEMA and the SBA provide low-interest loans to help rebuild infrastructure and maintain payroll.</li>
               </ul>
+            </div>
+          </div>
 
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Frequently Asked Questions</h3>
-              
+          <div className="mt-6 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Frequently Asked Questions</h2>
+            <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
               <div className="space-y-6">
                 <div>
                   <h4 className="font-bold text-gray-900 dark:text-gray-100">Can I get a grant to start a business?</h4>

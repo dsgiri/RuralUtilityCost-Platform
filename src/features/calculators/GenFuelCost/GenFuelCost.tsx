@@ -142,6 +142,32 @@ export default function GenFuelCost() {
             </div>
           </div>
           
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-8 print:hidden">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
+            <div className="space-y-4 text-sm text-gray-600">
+              <p>
+                <strong>Logic:</strong> <code>Burn Rate = Base Burn + (Max Burn - Base Burn) × (Load / 100)</code>. <code>Total Cost = Burn Rate × Runtime × Fuel Price</code>.
+              </p>
+              <p>
+                Generators use fuel even with zero load to maintain 60Hz frequency (approx 20% of max burn). This calculator adjusts for basic engine parasitic loss. Actual fuel consumption will vary based on generator age, engine condition, and exact load fluctuations.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Frequently Asked Questions</h3>
+            <div className="space-y-4 text-sm text-gray-600">
+              <div>
+                <h4 className="font-bold text-gray-800">Does a generator use less fuel if I plug fewer things in?</h4>
+                <p className="mt-1">Yes, but not proportionally. A generator running at 50% load does not burn exactly half the fuel of one running at 100%. The engine must burn a base amount of fuel just to spin at the required 3600 RPM to produce stable power, regardless of what is plugged in.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-800">Why are propane generators considered less efficient?</h4>
+                <p className="mt-1">Propane contains fewer BTUs (energy) per gallon than gasoline or diesel. As a result, an engine must burn roughly 10-15% more propane by volume to generate the exact same amount of electricity. However, propane stores indefinitely without degrading, making it an excellent standby fuel.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8 mt-8">
             <h3 className="text-lg font-bold text-gray-900 mb-2">Build Your Full Rural Power Plan</h3>
             <p className="text-gray-600 mb-4">

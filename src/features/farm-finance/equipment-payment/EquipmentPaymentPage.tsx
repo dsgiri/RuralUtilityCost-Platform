@@ -300,6 +300,24 @@ export default function EquipmentPaymentPage() {
                     </p>
                   </div>
                 </div>
+
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Frequently Asked Questions</h2>
+                  <div className="space-y-6 text-sm">
+                    <div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">Should I use dealer financing or a local farm bank?</h3>
+                      <p className="text-gray-600 dark:text-gray-400 mt-1">Manufacturers like John Deere or Kubota often offer promotional 0% or low-interest financing to move inventory. However, farm banks (like Farm Credit) might offer better terms if you are rolling the equipment into a larger operating loan or real estate purchase.</p>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">Does a trade-in reduce my sales tax?</h3>
+                      <p className="text-gray-600 dark:text-gray-400 mt-1">In many states, yes. Trading in old equipment often reduces the taxable amount of the new purchase, meaning you only pay tax on the difference between the new price and your trade-in value.</p>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">What is the difference between standard amortization and fixed principal?</h3>
+                      <p className="text-gray-600 dark:text-gray-400 mt-1">Standard amortization keeps your total payment exactly the same every month (interest decreases while principal increases). Fixed principal means you pay a flat amount toward the principal each month plus whatever interest accrued, meaning your first payments are the highest and they decrease over time.</p>
+                    </div>
+                  </div>
+                </div>
               </>
             )}
           </div>

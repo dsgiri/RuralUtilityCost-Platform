@@ -212,15 +212,36 @@ export default function MeatYield() {
               </p>
             </div>
 
-            <button
-              onClick={handleReset}
-              className="mt-6 w-full py-3 bg-white outline outline-1 outline-rose-200 hover:bg-rose-100 text-rose-900 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
-            >
-              <RotateCcw className="w-4 h-4" />
-              Reset Defaults
-            </button>
           </div>
         </div>
+        
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-8 print:hidden">
+          <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
+          <div className="space-y-4 text-sm text-gray-600">
+            <p><strong>Logic:</strong> <code>Hanging Weight = Live Weight × Dressing Percentage</code>, <code>Take Home Meat = (Hanging Weight - Cooler Shrink) × Cutting Yield</code>.</p>
+            <p><strong>Dressing Percentage:</strong> The percentage of the live animal that remains after slaughter and removal of the hide, head, hooves, and internal organs. Beef typically dresses at 60%, hogs at 72%.</p>
+            <p><strong>Cutting Yield:</strong> The percentage of the hanging weight that becomes packaged meat. This drops significantly if you request mostly boneless cuts and lean ground meat (meaning more bone and fat is discarded).</p>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Why did I get so little meat back?</h3>
+              <p className="text-gray-600 mb-2">
+                A 1,200 lb steer only yields about 430 lbs of take-home meat. You lose roughly 40% immediately at slaughter (hide, head, organs). You lose another 3-5% to moisture evaporation while the carcass ages in the cooler. Finally, you lose another 30-40% of the remaining weight to bones and fat trim during cutting.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">How can I increase my take-home weight?</h3>
+              <p className="text-gray-600 mb-2">
+                Ask your butcher for bone-in cuts (like T-bones instead of NY Strips/Filets), keep the brisket and ribs, and ask to keep organ meats (liver, heart, tongue) and soup bones.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

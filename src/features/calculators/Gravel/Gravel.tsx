@@ -42,7 +42,7 @@ export default function Gravel() {
   const results = calculate();
 
   return (
-    <div className="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <div className="p-4 sm:p-6">
       <SEO 
         title="Gravel Cost Calculator for Driveways"
         description="Estimate gravel needed for rural driveways, pathways, and landscaping. Accounts for crushed stone, pea gravel, and river rock."
@@ -55,6 +55,14 @@ export default function Gravel() {
         }}
       />
       
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Gravel Cost Calculator</h1>
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
+          Estimate gravel needed for rural driveways, pathways, and landscaping. Accounts for crushed stone, pea gravel, and river rock.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* LEFT: CALCULATOR INPUTS */}
       <section className="lg:col-span-4 bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex flex-col gap-4">
         <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Configuration</h3>
@@ -156,9 +164,10 @@ export default function Gravel() {
         {/* SEO SNIPPET / FAQ */}
         <div className="bg-[#1a5f3f]/5 rounded-xl border border-[#1a5f3f]/10 p-5 flex flex-col md:flex-row gap-8">
           <div className="flex-1">
-            <h4 className="text-xs font-bold text-[#1a5f3f] mb-2 uppercase">Guide: Gravel Estimating</h4>
+            <h4 className="text-xs font-bold text-[#1a5f3f] mb-2 uppercase">Formula & Assumptions</h4>
             <div className="text-[11px] leading-relaxed text-gray-700 space-y-2">
               <p>Gravel density requires a 1.5x multiplier when converting cubic yards to tons. A brand new driveway should have a minimum of 4 inches of gravel to distribute the weight of vehicles without exposing bare soil. A top-up dressing usually requires 2 inches.</p>
+              <p><strong>Logic:</strong> <code>Cubic Yards = (Length × Width × (Depth / 12)) / 27</code>. <code>Tons = Cubic Yards × 1.5</code>.</p>
             </div>
           </div>
           <div className="hidden md:block w-px bg-[#1a5f3f]/10"></div>
@@ -171,6 +180,7 @@ export default function Gravel() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

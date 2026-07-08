@@ -52,7 +52,7 @@ export default function Internet() {
   const results = calculate();
 
   return (
-    <div className="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <div className="p-4 sm:p-6">
       <SEO 
         title="Rural Internet Cost Calculator & Comparison" 
         description="Compare internet options for rural and off-grid homes. Starlink vs 5G vs DSL vs Fiber pricing and speeds by ZIP."
@@ -64,6 +64,14 @@ export default function Internet() {
         }}
       />
       
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Rural Internet Cost Calculator</h1>
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
+          Compare internet options for rural and off-grid homes. Starlink vs 5G vs DSL vs Fiber pricing and speeds by ZIP.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* LEFT: CALCULATOR INPUTS */}
       <section className="lg:col-span-4 bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex flex-col gap-4">
         <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Configuration</h3>
@@ -177,10 +185,10 @@ export default function Internet() {
         {/* SEO SNIPPET / FAQ */}
         <div className="bg-[#1a5f3f]/5 rounded-xl border border-[#1a5f3f]/10 p-5 flex flex-col md:flex-row gap-8 mt-auto">
           <div className="flex-1">
-            <h4 className="text-xs font-bold text-[#1a5f3f] mb-2 uppercase">Guide: Rural Internet Costs in 2026</h4>
+            <h4 className="text-xs font-bold text-[#1a5f3f] mb-2 uppercase">Formula & Assumptions</h4>
             <div className="text-[11px] leading-relaxed text-gray-700 space-y-2">
               <p>Choosing internet for a rural home used to mean suffering with slow DSL. Today, Starlink ($70-130/mo) and 5G Home Internet ($50-100/mo) deliver true broadband speeds to remote properties.</p>
-              <p>If fiber optic cabling ($60-120/mo) has reached your ZIP code through rural broadband initiatives, it remains the gold standard for latency and unmetered data transfers.</p>
+              <p><strong>Logic:</strong> This tool uses a simplified availability algorithm based on typical ZIP code density patterns to simulate available services. The "Best Value" is calculated by finding the lowest ratio of Monthly Price to Download Speed (lowest cost per Mbps).</p>
             </div>
           </div>
           <div className="hidden md:block w-px bg-[#1a5f3f]/10"></div>
@@ -193,6 +201,7 @@ export default function Internet() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

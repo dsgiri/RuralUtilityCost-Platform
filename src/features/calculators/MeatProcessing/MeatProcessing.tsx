@@ -228,12 +228,8 @@ export default function MeatProcessing() {
       
       <CalculatorSanityContent uniqueCode="CALC-FARM-302" />
 
-          <div className="mt-8 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-        <h3 className="flex items-center gap-2 font-bold text-gray-900 mb-4 text-base">
-          <Info className="w-5 h-5 text-orange-600" />
-          How it works
-        </h3>
-        
+      <div className="mt-8 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm print:hidden">
+        <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-600">
           <div>
             <h4 className="font-bold text-gray-800 mb-2">Understanding Hanging Weight:</h4>
@@ -250,6 +246,24 @@ export default function MeatProcessing() {
               <li><strong>Cut & Wrap:</strong> A per-pound fee (based on hanging weight) for aging, cutting into steaks/roasts, and vacuum or paper wrapping.</li>
               <li><strong>Hidden Fees:</strong> Be sure to account for disposal (offal removal), split fees (if dividing an animal between buyers), and transportation.</li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+        <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">What is the difference between hanging weight and boxed weight?</h3>
+            <p className="text-gray-600 mb-2">
+              Hanging weight is the carcass weight before it is cut into individual steaks and roasts. Boxed weight (or yield weight) is the final amount of meat you take home for the freezer. Because of bone removal and fat trimming during the cut-and-wrap process, boxed weight is typically 60-65% of the hanging weight.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Are cured and smoked meats included in the standard cut-and-wrap fee?</h3>
+            <p className="text-gray-600 mb-2">
+              Generally, no. Value-added processes like making sausages, smoking bacon, or curing hams usually incur an additional per-pound fee on top of the base cut-and-wrap charge.
+            </p>
           </div>
         </div>
       </div>

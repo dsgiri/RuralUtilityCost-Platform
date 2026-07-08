@@ -120,8 +120,8 @@ export default function CattleGrowthChart() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">How This Calculator Works</h2>
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 print:hidden">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Formula & Assumptions</h2>
           <div className="prose prose-blue max-w-none text-gray-600">
             <p>
               This tool uses standard industry formulas to calculate <strong>Average Daily Gain (ADG)</strong> based on sequential weigh-ins.
@@ -135,6 +135,24 @@ export default function CattleGrowthChart() {
               <Info className="w-5 h-5 flex-shrink-0" />
               <p className="m-0">
                 <strong>Disclaimer:</strong> This tool assumes linear weight gain based on a two-point historical snapshot. Real-world cattle growth curves are non-linear, slowing down as they approach mature frame sizes. Actual results will vary heavily based on feed rations, weather, and genetics.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">What is a good Average Daily Gain (ADG) for cattle?</h3>
+              <p className="text-gray-600 mb-2">
+                It depends entirely on the breed and feed program. A grain-finished feedlot steer might achieve an ADG of 3.0 to 4.0 lbs per day. A grass-finished steer on good pasture might average 1.5 to 2.0 lbs per day.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Why isn't my animal growing at the predicted rate?</h3>
+              <p className="text-gray-600 mb-2">
+                Growth is not perfectly linear. Animals experience compensatory gain (rapid growth after a period of poor feed), and their growth curve naturally flattens as they mature and begin depositing fat instead of muscle. Weather stress and parasites also significantly impact daily gain.
               </p>
             </div>
           </div>

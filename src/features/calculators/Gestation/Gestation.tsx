@@ -211,11 +211,11 @@ export default function Gestation() {
           </div>
 
           {/* SEO Content / FAQ */}
-          <div className="mt-12 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">How to Estimate Due Dates for Farm Animals</h2>
+          <div className="mt-8 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Formula & Assumptions</h2>
             
             <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
-              <p>Planning breeding and birthing dates is critical for proper herd and flock management. An accurate due date helps farmers prepare special feeds, arrange birthing pens, and ensure adequate shelter and veterinary supplies are ready.</p>
+              <p><strong>Logic:</strong> Planning breeding and birthing dates is critical. <code>Due Date = Breeding Date + Gestation Period</code>.</p>
               
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Gestation Period by Animal Type</h3>
               <ul className="list-disc pl-5 mb-8 space-y-2">
@@ -225,9 +225,12 @@ export default function Gestation() {
                 <li><strong>Horses / Mares:</strong> Roughly 340 days (~11 months), though it can range from 320 to 370 days.</li>
                 <li><strong>Dogs:</strong> Typically 63 days, measured from the date of ovulation rather than breeding.</li>
               </ul>
+            </div>
+          </div>
 
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Frequently Asked Questions</h3>
-              
+          <div className="mt-6 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Frequently Asked Questions</h2>
+            <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
               <div className="space-y-6">
                 <div>
                   <h4 className="font-bold text-gray-900 dark:text-gray-100">Are gestation dates exact?</h4>

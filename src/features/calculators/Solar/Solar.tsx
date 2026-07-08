@@ -57,7 +57,7 @@ export default function Solar() {
   const results = calculate();
 
   return (
-    <div className="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <div className="p-4 sm:p-6">
       <SEO 
         title="Off-Grid Solar Battery Calculator"
         description="Size your off-grid solar panels and battery bank correctly based on appliance wattage, sun hours, and required autonomy."
@@ -70,6 +70,14 @@ export default function Solar() {
         }}
       />
       
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Off-Grid Solar Calculator</h1>
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
+          Size your off-grid solar panels and battery bank correctly based on appliance wattage, sun hours, and required autonomy.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* LEFT: CALCULATOR INPUTS */}
       <section className="lg:col-span-6 xl:col-span-5 bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex flex-col gap-4">
         <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Configuration</h3>
@@ -203,7 +211,7 @@ export default function Solar() {
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mt-auto">
           <h3 className="flex items-center gap-2 text-base font-bold text-gray-900 mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#1a5f3f]"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-            How it works
+            Formula & Assumptions
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-600">
             <div>
@@ -212,16 +220,35 @@ export default function Solar() {
               <p>Older AGM (Lead Acid) batteries should never be drained below 50% capacity (DoD), otherwise lifespan plummets. Thus, a 10kWh need requires 20kWh of total lead-acid battery storage.</p>
             </div>
             <div>
-              <h4 className="font-bold text-gray-800 mb-2">Technical Assumptions:</h4>
+              <h4 className="font-bold text-gray-800 mb-2">Technical Assumptions & Logic:</h4>
               <ul className="list-disc pl-5 mt-2 space-y-1 marker:text-[#1a5f3f]">
-                <li><strong>Inverter Loss:</strong> Converting DC to AC involves heat loss. We pad the required battery baseline by 20% to cover inverter overhead.</li>
-                <li><strong>Solar Panel Sizing:</strong> Based on 400W nominal panels operating at ~75% real-world efficiency during peak sun hours.</li>
+                <li><strong>Logic:</strong> <code>Battery Target = (Daily Wh × Autonomy Days × 1.2 Inverter Loss) / 50% DoD</code>.</li>
+                <li><strong>Solar Panel Sizing:</strong> Based on 400W nominal panels operating at ~75% real-world efficiency during peak sun hours. <code>Panels = (Daily Wh / (Sun Hours × 0.75)) / 400</code>.</li>
                 <li><strong>Air Conditioning / Heating:</strong> Heating and cooling are incredibly power-hungry. It is often structurally cheaper to heat via wood or propane rather than scale solar to match winter HVAC loads.</li>
               </ul>
             </div>
           </div>
         </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">What is Autonomy?</h3>
+              <p className="text-gray-600 mb-2">
+                "Autonomy" is the number of consecutive days your battery bank can power your cabin with zero sunlight (e.g., during a multi-day winter storm). A standard off-grid setup aims for 3 days of autonomy.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I run air conditioning on solar?</h3>
+              <p className="text-gray-600 mb-2">
+                Yes, but it requires a massive battery bank and inverter. Air conditioners have huge startup surges and run continuously. For off-grid cabins, it is much more economical to use passive cooling techniques, ceiling fans, or a small high-efficiency mini-split AC used only during peak daytime sun hours.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
+      </div>
     </div>
   );
 }

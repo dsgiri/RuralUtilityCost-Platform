@@ -265,10 +265,11 @@ export default function HabitatCost() {
             </div>
           </div>
 
-          <div className="mt-8 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Restoring Rural Land Effectively</h2>
+          <div className="mt-8 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Formula & Assumptions</h2>
             
             <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
+              <p><strong>Logic:</strong> <code>Total Cost = Site Prep + Materials + Labor + Protection</code>.</p>
               <p>Converting agricultural land or overgrown brush into a thriving native ecosystem is a multi-year process. The biggest mistake landowners make is rushing the site preparation phase, leading to expensive native seed being outcompeted by invasive weeds.</p>
               
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Site Preparation is Everything</h3>
@@ -276,6 +277,22 @@ export default function HabitatCost() {
 
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Protecting Your Investment</h3>
               <p>When planting bare-root tree seedlings, deer and rodent browsing are the primary causes of mortality. Spending $4 per tree on a vented tree tube and oak stake seems expensive upfront, but it dramatically increases survival rates from 30% to over 85%, while also acting as a mini-greenhouse that accelerates early growth.</p>
+            </div>
+          </div>
+
+          <div className="mt-6 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Frequently Asked Questions</h2>
+            <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-bold text-gray-900 dark:text-gray-100">Why does prep cost so much for brush?</h4>
+                  <p>Clearing thick brush requires heavy machinery (skid steers with forestry mulchers) and intense physical labor to remove woody debris before a drill can safely pass over the ground.</p>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 dark:text-gray-100">Can I just broadcast seed?</h4>
+                  <p>Yes, but seed-to-soil contact is critical. If broadcasting over dead thatch, you must incorporate a cultipacker or at least time it with frost-seeding (freeze/thaw cycles) to pull the seed into the soil. A no-till drill is generally preferred for high-value seed.</p>
+                </div>
+              </div>
             </div>
           </div>
 

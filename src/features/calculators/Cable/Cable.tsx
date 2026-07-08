@@ -62,7 +62,7 @@ export default function Cable() {
   const results = calculate();
 
   return (
-    <div className="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <div className="p-4 sm:p-6">
       <SEO 
         title="Rural Cable TV Cost Calculator & Packages" 
         description="Compare Cable TV vs Satellite vs Streaming bundles for rural homes. Find the best TV packages based on your ZIP code."
@@ -73,7 +73,15 @@ export default function Cable() {
           "applicationCategory": "UtilityApplication"
         }}
       />
+
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Cable TV & Streaming Cost Calculator</h1>
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+          Compare Cable TV, Satellite (Dish/DirecTV), and Streaming bundles for rural homes. Find the best TV packages based on your ZIP code, TV count, and viewing habits.
+        </p>
+      </div>
       
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* LEFT: CALCULATOR INPUTS */}
       <section className="lg:col-span-4 bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex flex-col gap-4">
         <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Configuration</h3>
@@ -177,41 +185,41 @@ export default function Cable() {
           </div>
         </div>
 
-        <CalculatorSanityContent uniqueCode="CALC-UTIL-209" />
-
-              <ExportActions 
-          title="Cable TV Cost Calculator" 
-          targetRef={resultRef}
-          data={{
-            'ZIP Code': zip || 'N/A',
-            'Number of TVs': tvs,
-            'Premium Sports': sports ? 'Yes' : 'No',
-            'Bundle Internet': bundleInternet ? 'Yes' : 'No',
-            'Lowest Cost Winner': results.bestValue.name,
-            'Monthly Cost': `$${results.bestValue.price}`,
-            'Annual Savings vs Avg ($140/mo)': `$${Math.max(0, (140 - results.bestValue.price) * 12).toLocaleString()}`
-          }}
-        />
-
-        {/* SEO SNIPPET / FAQ */}
-        <div className="bg-[#1a5f3f]/5 rounded-xl border border-[#1a5f3f]/10 p-5 flex flex-col md:flex-row gap-8 mt-auto">
-          <div className="flex-1">
-            <h4 className="text-xs font-bold text-[#1a5f3f] mb-2 uppercase">Guide: Rural TV Providers</h4>
-            <div className="text-[11px] leading-relaxed text-gray-700 space-y-2">
-              <p>For rural properties, Dish Network and DirecTV have been local staples, generally costing $60-150/month. However, with the invasion of robust satellite internet (Starlink), Streaming bundles ($50-120/mo) like YouTube TV and Hulu are dominating.</p>
-              <p>Wired Cable is rarely viable far outside city limits unless heavy public infrastructure subsidies pushed line deployments down your road recently.</p>
-            </div>
-          </div>
-          <div className="hidden md:block w-px bg-[#1a5f3f]/10"></div>
-          <div className="flex-1">
-            <h4 className="text-xs font-bold text-[#1a5f3f] mb-2 uppercase">FAQ Quick Answers</h4>
-            <ul className="text-[11px] space-y-2 text-gray-600">
-              <li><strong>Dish vs DirecTV:</strong> DirecTV historically held the monopoly on premium sports packages, though Dish often averages cheaper base pricing.</li>
-              <li><strong>Streaming:</strong> Dropping satellite saves the $50-100 installation fee and monthly hardware receiver rental costs per TV.</li>
+        
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-8 print:hidden">
+          <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
+          <div className="space-y-4 text-sm text-gray-600">
+            <p><strong>Logic:</strong> <code>Total Cost = Base Package + (Extra TVs × Hardware Fee) + Premium Add-ons - Bundle Discounts</code>.</p>
+            <p>This calculator estimates monthly television costs for rural residents using base provider assumptions:</p>
+            <ul className="list-disc pl-5 space-y-2 mt-4">
+              <li><strong>ZIP Code Logic:</strong> Certain zip prefixes (e.g., 760, 770, 782) unlock traditional wired Cable TV packages, while remote areas default to Satellite or Streaming over cellular/WISP.</li>
+              <li><strong>Base Pricing:</strong> Dish ($105), DirecTV ($112), Streaming ($85), and Cable ($120).</li>
+              <li><strong>Hardware Fees:</strong> Traditional providers (Dish, DirecTV, Cable) typically charge $7-$10 per additional receiver box beyond the first TV. Streaming relies on smart TVs or cheap sticks ($0 recurring hardware fee).</li>
+              <li><strong>Sports Packages:</strong> Regional sports networks (RSNs) and premium sports add $15-$30 depending on the provider.</li>
+              <li><strong>Internet Bundling:</strong> Bundling internet with traditional cable often yields a $10-$20 discount, whereas streaming requires a standalone internet connection.</li>
             </ul>
           </div>
         </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Is Dish or DirecTV better for rural properties?</h3>
+              <p className="text-gray-600 mb-2">
+                Both work almost anywhere with a clear southern sky view. DirecTV historically held the monopoly on premium sports packages, while Dish often averages cheaper base pricing and slightly better DVR hardware (the Hopper).
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I just use streaming instead of satellite?</h3>
+              <p className="text-gray-600 mb-2">
+                Yes, but only if you have a reliable internet connection (like Starlink or 5G Home Internet) capable of consistent speeds over 25 Mbps. Dropping satellite saves the $50-100 installation fee and the $7-10 monthly hardware receiver rental costs per TV, as streaming apps run directly on your Smart TVs.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
+      </div>
     </div>
   );
 }

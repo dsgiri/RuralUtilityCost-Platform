@@ -134,6 +134,30 @@ export default function Propane() {
                 </p>
               </div>
 
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mt-4 print:hidden">
+                <h3 className="flex items-center gap-2 text-base font-bold text-gray-900 mb-4">
+                  Formula & Assumptions
+                </h3>
+                <div className="text-sm text-gray-600 space-y-2">
+                  <p><strong>The 80% Rule:</strong> By law, bulk propane tanks cannot be filled past 80% of their total water capacity. This leaves 20% empty space inside the tank to allow the liquid propane to safely expand as temperatures rise. Therefore, a "500-gallon" tank actually only holds 400 gallons of usable fuel.</p>
+                  <p><strong>Logic:</strong> <code>Max Usable Gallons = Tank Size × 0.8</code>. <code>Gallons Needed = Max Usable Gallons - (Tank Size × (Current Gauge % / 100))</code>.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Frequently Asked Questions</h3>
+                <div className="space-y-4 text-sm text-gray-600">
+                  <div>
+                    <h4 className="font-bold text-gray-800">Why won't my company fill my tank to 100%?</h4>
+                    <p className="mt-1">Safety regulations. Propane expands drastically with heat. If a tank were filled to 100% on a cool morning, the afternoon heat would cause the liquid to expand, build immense pressure, and trigger the emergency relief valve (venting explosive gas into the air).</p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800">At what gauge percentage should I call for a refill?</h4>
+                    <p className="mt-1">Most companies recommend calling when your gauge reads between 20% and 30%. Waiting until it drops below 10% risks running out entirely, which legally requires a delivery driver to perform a "leak check" on your entire system before refilling (which often carries a steep extra fee).</p>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8 mt-8">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Build Your Full Rural Budget</h3>
                 <p className="text-gray-600 mb-4">

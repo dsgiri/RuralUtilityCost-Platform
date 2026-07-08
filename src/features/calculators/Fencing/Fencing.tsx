@@ -170,7 +170,7 @@ export default function Fencing() {
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mt-4 print:hidden">
                 <h3 className="flex items-center gap-2 text-base font-bold text-gray-900 mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-600"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                  How it works
+                  Formula & Assumptions
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-600">
                   <div>
@@ -188,6 +188,20 @@ export default function Fencing() {
                       <li><strong>Gates:</strong> Each gate interrupts the fence line, requiring 2 sturdy anchor/brace posts to hold the wire tension.</li>
                       <li><strong>Wire Rolls:</strong> Standard barbed wire is sold in 1/4 mile rolls (1,320 feet).</li>
                     </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Frequently Asked Questions</h3>
+                <div className="space-y-4 text-sm text-gray-600">
+                  <div>
+                    <h4 className="font-bold text-gray-800">What is the cheapest way to fence land?</h4>
+                    <p className="mt-1">High-tensile smooth wire or basic barbed wire are generally the cheapest materials per linear foot. However, they may not be suitable for all types of livestock (e.g., horses often require more visible or safer options like no-climb wire).</p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800">How does terrain affect the cost?</h4>
+                    <p className="mt-1">Rocky soil, steep slopes, and heavy brush will dramatically increase labor costs. Installing T-posts in solid rock often requires specialized drilling equipment, which can double or triple the per-foot installation rate.</p>
                   </div>
                 </div>
               </div>

@@ -225,12 +225,12 @@ export default function EnergyDemand() {
               />
             </div>
           </div>
-
           {/* Educational Content */}
-          <div className="mt-12 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Understanding Peak Demand Billing</h2>
+          <div className="mt-12 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Formula & Assumptions</h2>
             
             <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
+              <p><strong>Logic:</strong> <code>Total kW = Sum(Active Appliance kW)</code>. <code>Estimated Cost = Total kW × Demand Rate</code>.</p>
               <p>Historically, residential properties were only billed for the total volume of energy they used in a month (kWh). However, many rural electric cooperatives and some municipal utilities are moving to <strong>three-part billing</strong>, which introduces a "Peak Demand" charge.</p>
               
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">kW vs. kWh (The Car Analogy)</h3>
@@ -243,9 +243,12 @@ export default function EnergyDemand() {
 
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">How the 15-Minute Interval Works</h3>
               <p>Most meters measure demand in rolling 15-minute or 30-minute intervals. Your bill uses the <strong>single highest interval</strong> from the entire billing cycle. You could keep your power usage extremely low for 29 days, but if you run every heavy appliance simultaneously for just 15 minutes on a Tuesday, your demand charge will be permanently locked at that high rate for the rest of the month.</p>
+            </div>
+          </div>
 
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Frequently Asked Questions</h3>
-              
+          <div className="mt-6 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Frequently Asked Questions</h2>
+            <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
               <div className="space-y-6">
                 <div>
                   <h4 className="font-bold text-gray-900 dark:text-gray-100">How do I lower my demand charge?</h4>
@@ -258,7 +261,6 @@ export default function EnergyDemand() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>

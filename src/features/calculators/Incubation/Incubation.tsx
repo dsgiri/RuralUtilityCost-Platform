@@ -225,11 +225,11 @@ export default function Incubation() {
           </div>
 
           {/* SEO Content / FAQ */}
-          <div className="mt-12 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">How to Calculate Hatch Dates</h2>
+          <div className="mt-8 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Formula & Assumptions</h2>
             
             <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
-              <p>Successful egg incubation requires precise timing to control temperature, turning frequency, and humidity levels. Our calculator helps you pinpoint exactly when to start the set, when to enter "lockdown", and when to expect new chicks.</p>
+              <p><strong>Logic:</strong> Successful egg incubation requires precise timing. <code>Hatch Date = Set Date + Incubation Days</code>. <code>Lockdown Date = Hatch Date - 3 Days</code>.</p>
               
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Incubation Days by Bird Species</h3>
               <ul className="list-disc pl-5 mb-8 space-y-2">
@@ -239,9 +239,12 @@ export default function Incubation() {
                 <li><strong>Turkey:</strong> ~28 days (Lockdown on Day 25)</li>
                 <li><strong>Goose:</strong> ~30 days, fluctuating by breed (Lockdown on Day 27)</li>
               </ul>
+            </div>
+          </div>
 
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Frequently Asked Questions</h3>
-              
+          <div className="mt-6 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Frequently Asked Questions</h2>
+            <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
               <div className="space-y-6">
                 <div>
                   <h4 className="font-bold text-gray-900 dark:text-gray-100">When should I stop turning eggs?</h4>

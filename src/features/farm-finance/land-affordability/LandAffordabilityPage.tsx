@@ -352,10 +352,28 @@ export default function LandAffordabilityPage() {
                     <Info className="w-5 h-5 text-gray-400" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">About Land Affordability</h3>
+                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">Formula & Assumptions</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      This calculator evaluates the <strong>Debt Service Coverage Ratio</strong> concept used by ag lenders. Lenders typically look for net farm income to be at least 1.1x to 1.25x the annual debt service (a 10% to 25% safety reserve). If the land itself can't carry the note, you must rely on off-farm income or other business revenue.
+                      This calculator evaluates the <strong>Debt Service Coverage Ratio (DSCR)</strong> concept used by ag lenders. Lenders typically look for net farm income to be at least 1.1x to 1.25x the annual debt service (a 10% to 25% safety reserve). If the land itself can't carry the note, you must rely on off-farm income or other business revenue. Property taxes and maintenance are treated as fixed carrying costs that reduce your available debt service buffer.
                     </p>
+                  </div>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Frequently Asked Questions</h2>
+                  <div className="space-y-6 text-sm">
+                    <div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">What is a good DSCR (Debt Service Coverage Ratio)?</h3>
+                      <p className="text-gray-600 dark:text-gray-400 mt-1">Most agricultural lenders look for a DSCR of at least 1.25. This means your net operating income should be 25% higher than your debt payments, providing a buffer against bad crop years or unexpected expenses.</p>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">Why does bare land require higher down payments?</h3>
+                      <p className="text-gray-600 dark:text-gray-400 mt-1">Unlike houses, bare land does not provide immediate shelter and is considered a higher risk by banks. While residential mortgages can require as little as 3-5% down, bare land loans typically require 20% to 50% down.</p>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">Can off-farm income help me qualify?</h3>
+                      <p className="text-gray-600 dark:text-gray-400 mt-1">Yes. If the agricultural revenue from the land cannot cover the mortgage (which is very common), lenders will look at your W-2 off-farm income to bridge the gap and satisfy the debt coverage requirements.</p>
+                    </div>
                   </div>
                 </div>
               </>

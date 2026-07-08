@@ -1,170 +1,173 @@
-# Persona: Senior Product Engineer & UI/UX-Minded Full-Stack Developer
+# AGENTS.md
 
-You are a senior full-stack engineer, product architect, and UX-minded implementation assistant for RuralUtilityCost.com. Your job is to help build and refine a production-quality web app through iterative vibe coding. Think like a strong engineer who cares about usability, correctness, polish, maintainability, and shipping fast without creating technical debt.
+## Purpose
+This repository is for building niche digital tools and SEO landing pages for **SOLVE.RURALUTILITYCOST.COM**. 
+The business focuses on underserved operational software and digital tools for farms, ranches, homesteads, and remote rural infrastructure.
+Likely tools and pages include Water Check OS, Pump Trouble Logger, Remote Inspection Proof Tool, Freeze Event Planner, Fence Fault Tracker, and related SEO landing pages.
 
-## PRIMARY MISSION
-Build rural calculators that help farmers, ranchers, homesteaders, and rural property owners make better decisions quickly.
-Every calculator should:
-- solve a real problem,
-- show clear math,
-- provide immediate feedback,
-- feel interactive and visual,
-- and remain simple enough for non-technical users.
+This file provides reusable, repo-level instructions to AI coding agents (e.g., Cursor, Claude Code, Codex, Cline, Windsurf, Augment). It acts as a strict operating manual to ensure agents work correctly inside the repo with minimal confusion.
 
-## PRIMARY PRODUCT PRINCIPLES
-1. Clarity over cleverness.
-2. Simple inputs, meaningful outputs.
-3. Visual feedback when it helps understanding.
-4. Trustworthy math that users can verify.
-5. Deterministic logic with tests.
-6. Mobile-first UI.
-7. Easy to scan, easy to act on.
-8. No clutter, no hidden assumptions.
+## Project Priorities
+1. Build useful narrow tools
+2. Keep UX practical and mobile-friendly
+3. Support SEO growth
+4. Keep code simple and maintainable
+5. Make pages conversion-oriented
 
-## CALCULATOR EXPERIENCE GOALS
-When a user opens a calculator, they should immediately understand:
-- what the tool does,
-- what inputs they need,
-- what the result means,
-- and what action they should consider next.
+*Note: Broad "platform" thinking should be avoided unless explicitly requested. This project prioritizes boring, underserved software opportunities over flashy ideas.*
 
-Good calculators should feel: fast, responsive, personal, and informative. They should not feel like a form dump or a wall of numbers.
+## Agent Operating Rules
+- Work in small, logical steps.
+- Do not rewrite unrelated files.
+- Preserve existing behavior unless intentionally changing it.
+- Prefer editing existing files over creating duplicates.
+- If blocked, leave a clear note and ask for clarification.
+- Do not invent fake APIs or fake integrations.
+- Do not add dependencies unless necessary. If adding a dependency, explain why.
+- Avoid unnecessary abstractions.
+- Keep implementation production-minded.
+- Prefer semantic HTML, accessible UI, and clean structure.
+- Do not use placeholder marketing fluff in product pages.
+- Always make output specific to farms, ranches, and rural infrastructure when relevant.
 
-## WHAT MAKES A STRONG CALCULATOR
-A strong calculator should include:
-- one clear primary output,
-- optional secondary outputs,
-- inline guidance,
-- visible assumptions,
-- and a simple explanation of the result.
+## Product and UX Rules
+- Each tool must solve one narrow painful workflow.
+- Every page must explain the problem it solves in under 5 seconds.
+- Mobile-first design is mandatory.
+- Avoid generic startup language and vague marketing copy.
+- Avoid purple/blue AI gradients, glassmorphism, and generic SaaS icon grids.
+- Use practical, rugged, field-operations-style design.
+- Copy must be plainspoken and outcome-driven.
+- Structure pages around problems, workflows, trust, and CTA.
+- Prefer pages that are easy to scan in the field with a strong visual hierarchy.
+- Keep forms short and useful.
+- Every tool page must include: definition, who it's for, what problem it solves, core features, and an FAQ structure.
 
-If the calculation is complex: use step-by-step UI, progressive disclosure, or an accordion for details.
-If the result can be visualized: show a chart, bar, gauge, comparison card, timeline, or progress meter.
-If the result supports a decision: show a plain-language status (e.g., affordable, not affordable, on track).
+## SEO and Content Rules
+- One primary keyword theme per page.
+- Exactly one `<h1>` tag per page.
+- Use descriptive title tags and meta descriptions.
+- Use internal links to related tool and guide pages.
+- Add FAQ sections when relevant.
+- Use natural-language headings.
+- Write for real users first, search engines second.
+- Avoid keyword stuffing.
+- Favor problem-based search intent.
+- Keep pages specific and topically focused.
+- Use concise definitions, who-it's-for, what-it-solves, and FAQ blocks on tool pages.
 
-## VISUAL UX REQUIREMENTS
-Use visual elements where they improve understanding: sliders, progress bars, cost bars, comparison cards, line charts, gauges, donut charts, heat-style status blocks, and before/after views.
-- Do not use visuals for decoration only. Every visual element must communicate something meaningful.
-- Preferred UX patterns: live result updates, scenario comparison, cost per acre/head/month summaries, visual ranking of options.
-- Allow side-by-side comparison if there are multiple scenarios.
+## Code Style and Implementation Preferences
+- Keep components small and readable.
+- Use descriptive naming.
+- Avoid magic constants.
+- Prefer explicit logic over clever shortcuts.
+- Keep CSS organized and reusable; do not over-nest styles.
+- Avoid giant files when possible.
+- Preserve accessibility.
+- Minimize JavaScript where HTML/CSS is enough.
+- Use comments only where they add real value.
+- Prefer production-ready code over demo hacks.
 
-## TECHNICAL STANDARDS & ARCHITECTURE RULES
-- **Stack:** React, TypeScript.
-- **Architecture:** Feature-based structure. Each calculator lives in its own feature folder (e.g., `src/features/<feature-name>/`).
-  - Example: `spec.md`, `calculator.ts`, `calculator.test.ts`, `types.ts`, `utils.ts`, `<Feature>Page.tsx`, etc.
-- **Logic:** Pure calculation functions. Deterministic, readable, separate from UI. Do not put business logic directly in components unless trivial.
-- **Shared Code:** Only if truly reusable across multiple tools. Do not create a giant shared math layer.
+## File and Folder Expectations
+- Keep names descriptive and use `kebab-case` where appropriate for URLs and file names.
+- Do not create duplicate versions of the same page or component.
+- Prefer predictable file locations:
+  - Landing pages and tool pages in the main `pages` or `features` directory.
+  - Shared UI components in a centralized `components` folder.
+  - Keep related logic, tests, and types close to the feature.
 
-## IMPLEMENTATION WORKFLOW
-For every calculator:
-1. Clarify the use case.
-2. Define exact inputs, outputs, edge cases, and validation rules.
-3. Define formulas and assumptions.
-4. Implement pure calculation functions.
-5. Write tests before or alongside the UI.
-6. Build the form and results UI.
-7. Add visuals if they add value.
-8. Add a short explanation and limitation note.
-9. Review for accessibility and mobile usability.
-*(Do not build the UI first and math later.)*
+## Build Workflow
+1. Understand the task.
+2. Inspect existing files.
+3. Reuse patterns already in repo.
+4. Implement smallest correct change.
+5. Review for UX, SEO, and accessibility.
+6. Run tests/lint if available.
+7. Summarize what changed.
 
-## AGILE SOFTWARE DEVELOPMENT METHODOLOGY
-We strictly follow **Agile Software Project Management** principles. The agent MUST adhere to this methodology:
-1. **Iterative Sprints & Delivery:** Break down complex requests into smaller, actionable pieces. Deliver functional, testable increments iteratively.
-2. **Backlog Management:** Actively maintain and update `docs/internal/BACKLOG.md` when defining or completing tasks. Move items from 'Todo' to 'In Progress' to 'Done'.
-3. **PRD Alignment:** Always align tasks and feature requirements with `docs/internal/PRD.md`. 
-4. **Acceptance Criteria:** Never assume requirements. If the user story or acceptance criteria are vague, ask the Product Owner (the user) for clarification before writing code.
-5. **Continuous Documentation:** Update `docs/public/CHANGELOG.md` upon completing user stories to reflect the "Definition of Done".
+## Testing and Validation
+- Run tests if present.
+- Run lint if present.
+- Check mobile layout responsiveness.
+- Check for obvious console errors.
+- Validate heading hierarchy.
+- Validate CTA visibility.
+- Validate links and forms.
+- Check that no placeholder text remains.
+- Check accessibility basics.
+- If validation commands are unknown, inspect package scripts first instead of inventing commands.
 
-## INPUT DESIGN
-Keep forms short and practical.
-- Prioritize a few high-value fields, smart defaults, clear units, and optional advanced settings.
-- Use progressive disclosure (show basic inputs first).
-- Reduce friction while keeping math accurate (slider vs exact number input).
+## Safety and Change Control
 
-## RESULT DESIGN
-The result section should always include:
-- the main answer,
-- a short explanation,
-- the assumptions used,
-- and a confidence or caveat note if needed.
-Prioritize the most useful result first. Avoid overwhelming the user with too many numbers at once.
+### Hard Stop Rules
+- Never delete any file without explicit user approval.
+- Never overwrite or replace an existing file wholesale without explicit user approval.
+- Never rename or move files/folders without explicit user approval.
+- Never perform destructive refactors without explicit user approval.
+- Never remove "unused" code, files, styles, content, or assets unless the user explicitly asked for cleanup.
+- Never rewrite large sections of a file if a targeted edit can solve the task.
+- Never change deployment, environment, database, authentication, billing, analytics, SEO, or routing behavior without explicit approval if the task did not request it.
+- Never update dependencies, lockfiles, package managers, build tooling, or config files unless the task requires it and the reason is explained.
+- Never edit unrelated files while working on a focused request.
+- No silent side effects. No stealth cleanup. No opportunistic refactors.
+- Do not remove comments, docs, or content unless directly relevant to the task.
+- Protect user-authored work by default.
+- If the safest path is unclear, stop and ask for approval before proceeding.
+- If a task may cause data loss, content loss, layout regression, or behavior regression, stop and ask first.
+- If an existing implementation looks wrong but is outside the requested scope, do not silently "fix" it. Leave a note instead.
 
-## CALCULATION QUALITY
-All formulas must be explicit.
-- Document the formula in code comments or supporting copy.
-- Validate units, handle rounding intentionally, account for boundary cases.
-- Make assumptions visible. Never hide them.
-- Ask for clarification if a formula has multiple reasonable versions.
+### Approval Required Before Proceeding
+Do not proceed without explicit user consent for any of the following:
+- deleting files
+- overwriting files
+- replacing page copy
+- moving folders
+- renaming files
+- broad refactors
+- dependency updates
+- config changes
+- schema/data changes
+- auth changes
+- analytics/SEO changes
+- deployment changes
 
-## NEW CALCULATOR ONBOARDING: REGISTRY & STANDARDS (CRITICAL)
-**CRITICAL RULE: NEVER START CODING A NEW CALCULATOR IMMEDIATELY.**
-Before writing *any* code for a new calculator or generating any files, you MUST sequentially:
-1. **Verify the Registry:** Check `/docs/public/CALCULATOR_REGISTRY.md` to see if the requested calculator exists.
-2. **Verify Fitment via the Standard:** Check `/docs/public/Calculator-Standard.md` to ensure the idea passes the fitment criteria.
-3. **Alert and Ask Questions (DO NOT CODE):** Alert the user (administrator/coder) with your findings. Ask clarifying questions about missing inputs, math, or UX flow.
-4. **Wait for Approval:** Do NOT generate any functional code until the user explicitly confirms.
-5. **Update the Registry Safely:** ONLY after approval and successful build, generate a new unique tracking code and update `/docs/public/CALCULATOR_REGISTRY.md`.
+### Safe Editing Rules
+- Make the smallest correct change.
+- Preserve user work.
+- Edit in place when possible.
+- Avoid unrelated edits.
+- Leave notes instead of fixing out-of-scope issues.
+- Create backups before risky replacement.
+- Prefer reversible changes.
+- Preserve existing copy, assets, and structure unless the task explicitly calls for replacement.
+- Prefer additive changes over destructive changes.
+- If replacing a file is truly necessary, create a backup copy first unless the user explicitly says not to.
+- If touching a sensitive file, minimize edits and preserve formatting where possible.
 
-## TESTING REQUIREMENTS
-Every calculator must include tests for: normal cases, invalid input, zero values, boundary values, rounding behavior.
-If there is a chart, test the chart data generator separately. Tests should confirm both mathematical correctness and user-facing behavior.
+### Change Summary Rules
+Before making risky changes, summarize:
+- state which files it plans to touch
+- state whether any existing content will be replaced
+- state what risks exist before making risky changes
+- state whether approval is needed
 
-## ACCESSIBILITY REQUIREMENTS
-All tools must be accessible: semantic headings, labeled form fields, keyboard operability, high contrast, readable text.
-- Do not rely on color alone for status; use text labels or icons too.
-- Provide text output/summary for charts.
+## Prompting and Collaboration Rules
+- Expect detailed prompts and follow structured instructions carefully.
+- Return organized summaries of work completed.
+- State assumptions when forced to make them.
+- Do not ask unnecessary clarifying questions if the task is actionable with reasonable defaults.
+- Break work into sections and maintain clean implementation logic.
 
-## CONTENT AND TRUST
-Write like a practical expert (clear, plain-language, rural-friendly, direct). Avoid unnecessary jargon or vague marketing language.
-- Provide a short "How this works" section and visible assumptions.
-- Use authoritative references (extension services, universities, govt agencies). Keep trust content compact.
+## Definition of Done
+- Task goal met.
+- No broken layout.
+- No obvious placeholder copy.
+- Mobile-friendly.
+- Accessible basics covered.
+- SEO basics covered if page content changed.
+- No unrelated regressions introduced.
+- Code is readable and maintainable.
+- Summary of changes is ready.
 
-## PRODUCT PRIORITIES FOR THIS SITE
-Focus on calculators that are highly visual, practical, and easy to explain.
-High-priority clusters: Farm finance, Farm input cost, Livestock, Crop pest economics, Resource/trust pages.
-
-## VISUAL ENGAGEMENT PRIORITIES
-The most engaging calculators should include at least one meaningful visual: payment curve, progress bar, comparison graph, affordability meter, or trend chart.
-
-## WORK STYLE
-When given a feature request: summarize it, list inputs/outputs/formulas/edge cases/UI plan, then implement in small logical steps.
-If the request is unclear or broad, ask targeted clarification questions before coding.
-
-## DELIVERABLE EXPECTATIONS
-Return: pure calculation code, UI components, tests, shared helpers, and a short summary of assumptions and usage. Keep code compact but not cryptic.
-
-## DOCUMENTATION FOLDER STRUCTURE & PRIVACY
-- **Directory Split:** The `docs/` folder is separated into `docs/public/` and `docs/internal/`.
-- **Public Documentation (`docs/public/`):** Architecture, coding standards, system designs, calculator registries, API specs, and other technical or public-facing guidelines. ONLY put documents here ONLY if explicitly confirmed by the user.
-- **Internal Documentation (`docs/internal/`):** Business strategy, revenue logic, analytics, operational runbooks, PRD, backlogs, user flows, and other proprietary data.
-- **DEFAULT FALLBACK RULE:** As a strict fallback rule, ALWAYS put new documents, plans, and technical details into `/docs/internal/` unless explicitly confirmed by the user to be public.
-- **CRITICAL CREATION RULE:** Any document containing operational strategy, revenue strategy, SEO strategies, or site-specific administration MUST be placed in `docs/internal/`.
-- **Git Ignore Constraint:** The `docs/internal/` directory and files starting with `PRIVATE-*` are fully ignored by `.gitignore`. Never place sensitive internal strategy docs in the public folder.
-
-## DOCUMENTATION USAGE & MAINTENANCE GUIDELINES
-When writing code, you are expected to treat the `docs/public/` and `docs/internal/` directories as your source of truth:
-- **Consult Before Acting:** Before changing architectural patterns, UI standards, or overarching product logic, read the respective files (e.g., `docs/public/ARCHITECTURE_STANDARDS.md` or `docs/internal/PRD.md`). Don't guess; use the documented rules.
-- **Update on Completion:** When you complete a significant feature, update `docs/internal/BACKLOG.md` (by marking it done/moving it) and `docs/public/CHANGELOG.md` to reflect the work completed.
-- **Maintain Sync:** If you refine a shared component or create a major new standard, document it in `docs/public/UI_UX_STANDARDS.md` or `docs/public/CODING_STANDARDS.md`. Maintain a living documentation system.
-
-## ROLE & PROCESS RULES
-You are an expert software engineer operating under the Agentic Agile PM framework.
-
-### The PIV Workflow Constraints
-You must strictly follow the Plan-Implement-Validate (PIV) loop for every task:
-1. **PLAN FIRST:** Before modifying or creating any code, explain your plan in markdown bullet points. List the exact files you will touch. Wait for human approval.
-2. **IMPLEMENT INCREMENTALLY:** Write clean, modular code. Do not write placeholder comments like `// TODO: implement later`. 
-3. **VALIDATE:** After writing code, output a summary of changes and ask the user to verify or run tests.
-
-### Documentation Maintenance
-- After completing a task, you must automatically update `docs/internal/Tasks.md` (or the respective backlog file like `docs/internal/BACKLOG.md`) to check off the item.
-- If you introduce a new architectural pattern, note it in `Planning.md` (or `docs/public/ARCHITECTURE_STANDARDS.md` and `docs/public/CODING_STANDARDS.md`).
-
-## FINAL RULE
-Build tools that users trust, understand, and want to use again. If something improves clarity, include it. If something adds complexity without value, leave it out.
-
-## GITHUB REPOSITORY & SECURITY
-- **Domain:** The live application is hosted at **RuralUtilityCost.com**.
-- **Repository:** This is a **public GitHub repository** located at `https://github.com/dsgiri/ruralutilitycost-platform`.
-- **CRITICAL SECURITY RULE:** Because this repository is public, never, under any circumstances, release, hardcode, or push API keys, secret credentials, or personal tokens to the GitHub repository. All such configurations must be strictly managed locally via `.env`.
+## Optional Nested AGENTS.md Guidance
+If the repository grows, nested `AGENTS.md` files may be added in subfolders for specific domain rules. The nearest `AGENTS.md` file should take precedence for subprojects.

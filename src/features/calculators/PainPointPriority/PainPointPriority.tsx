@@ -254,6 +254,40 @@ export default function PainPointPriority() {
               </div>
             </div>
 
+            <div className="mt-8 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm print:hidden">
+              <h2 className="text-xl font-bold text-gray-900 mb-4">Formula & Assumptions</h2>
+              <div className="prose max-w-none text-gray-600">
+                <p><strong>Logic:</strong> This tool uses a standard qualitative scoring matrix common in business analysis.</p>
+                <p><code>Total Pain Score = Severity + Frequency + Cost Impact + Time Impact + Risk/Urgency</code>.</p>
+                <p>The maximum score is 25. Items are automatically ranked first by their Total Pain Score (highest to lowest), and then tie-broken by the Effort Required (lowest effort wins).</p>
+                <p><strong>Categories:</strong></p>
+                <ul>
+                  <li><strong>Quick Win:</strong> High pain (≥16) but low effort (≤3). These are your highest priority targets.</li>
+                  <li><strong>Long-Term Project:</strong> High pain (≥16) and high effort (&gt;3). These require capital planning or grant funding.</li>
+                  <li><strong>Minor Fix:</strong> Low pain (&lt;16) and low effort (≤2). Do these when you have spare time.</li>
+                  <li><strong>Low Priority:</strong> Low pain (&lt;16) and high effort (&gt;2). Do not do these.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-6 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm print:hidden">
+              <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">How do I score 'Cost Impact'?</h3>
+                  <p className="text-gray-600">
+                    A score of 1 means it costs you almost nothing in lost revenue or direct expenses. A score of 5 means it is causing significant financial bleeding, crop loss, or crippling repair bills.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">What is the difference between Severity and Risk?</h3>
+                  <p className="text-gray-600">
+                    Severity measures how bad the problem is <em>right now</em>. Risk measures what happens if you <em>ignore it</em>. A leaky roof on a shed might have low severity (it's just a shed), but high risk (the expensive tractor inside might rust).
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {items.length > 0 && (
               <div className="print:hidden mt-4">
                 <div className="flex flex-col sm:flex-row gap-2 mt-6 print:hidden">

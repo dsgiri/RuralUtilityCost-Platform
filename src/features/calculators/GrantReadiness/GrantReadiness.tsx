@@ -338,23 +338,41 @@ export default function GrantReadiness() {
                 </div>
               </div>
 
-              <div className="p-4 bg-white rounded-xl border border-gray-100 leading-relaxed text-sm text-gray-600 shadow-sm mt-6">
-                <h3 className="flex items-center gap-2 font-bold text-gray-900 mb-3 text-base">
-                  <Info className="w-5 h-5 text-emerald-600" />
-                  How it works
-                </h3>
-                <ul className="space-y-2 list-disc pl-5 marker:text-emerald-500">
-                  <li><strong>Spend Phase:</strong> You spend {formatCurrency(costPerPhase)} to complete the first phase of the project out of your own pocket.</li>
-                  <li><strong>Verification:</strong> Submit paid receipts, invoices, and cancelled checks to the granting agency.</li>
-                  <li><strong>Reimbursement:</strong> Wait roughly 30-90 days for your {formatCurrency(costPerPhase * (grantPercent2/100))} reimbursement payout.</li>
-                  <li><strong>Cycle Repeats:</strong> Use that reimbursement plus your remaining match cash to start the next phase.</li>
-                </ul>
+              <div className="p-4 bg-white rounded-xl border border-gray-100 leading-relaxed text-sm text-gray-600 shadow-sm mt-6 print:hidden">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
+                <div className="space-y-4">
+                  <p><strong>Logic:</strong> <code>Working Capital Needed = Total Project Cost / Number of Phases</code>. <code>Total Grant Awarded = Total Project Cost × Grant Percentage</code>.</p>
+                  <ul className="space-y-2 list-disc pl-5 marker:text-emerald-500">
+                    <li><strong>Spend Phase:</strong> You spend {formatCurrency(costPerPhase)} to complete the first phase of the project out of your own pocket.</li>
+                    <li><strong>Verification:</strong> Submit paid receipts, invoices, and cancelled checks to the granting agency.</li>
+                    <li><strong>Reimbursement:</strong> Wait roughly 30-90 days for your {formatCurrency(costPerPhase * (grantPercent2/100))} reimbursement payout.</li>
+                    <li><strong>Cycle Repeats:</strong> Use that reimbursement plus your remaining match cash to start the next phase.</li>
+                  </ul>
+                </div>
               </div>
 
             </div>
           </div>
         </div>
       )}
+
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+        <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">What is a reimbursable grant?</h3>
+            <p className="text-gray-600 mb-2">
+              Unlike a typical cash prize, a reimbursable grant requires you to spend the money first. You must prove you paid the contractor with your own cash (or a bridge loan) before the government cuts you a reimbursement check.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Why do I need a bridge loan?</h3>
+            <p className="text-gray-600 mb-2">
+              Because government reimbursements can take 30 to 90 days to process, a bridge loan provides the cash flow needed to keep contractors working without stalling the project.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <CalculatorSanityContent uniqueCode="CALC-GOV-502" />
 
