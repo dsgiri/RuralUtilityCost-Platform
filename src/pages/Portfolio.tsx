@@ -9,10 +9,10 @@ const categories = [
     description: "Predictive tools, scenario testing, and future-oriented applications.",
     icon: <LineChart className="w-6 h-6" />,
     apps: [
-      { name: "Forecast", url: "https://forecast.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Forecast", description: "Forecasting app for agricultural trends, price outlooks, and future-oriented rural planning." },
-      { name: "WhatIf", url: "https://whatif.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-WhatIf", description: "Scenario analysis app for testing rural cost assumptions and comparing outcome changes across inputs." },
-      { name: "Plan", url: "https://plan.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Plan", description: "Planning app for budgeting, resource allocation, and practical rural decision support." },
-      { name: "Predictor", url: "https://predictor.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Predictor", description: "Model-driven prediction app for rural and agricultural outcomes, with confidence-based insights." }
+      { name: "Forecast", url: "https://forecast.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Forecast", description: "Forecasting app for agricultural trends, price outlooks, and future-oriented rural planning." },
+      { name: "WhatIf", url: "https://whatif.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-WhatIf", description: "Scenario analysis app for testing rural cost assumptions and comparing outcome changes across inputs." },
+      { name: "Plan", url: "https://plan.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Plan", description: "Planning app for budgeting, resource allocation, and practical rural decision support." },
+      { name: "Predictor", url: "https://predictor.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Predictor", description: "Model-driven prediction app for rural and agricultural outcomes, with confidence-based insights." }
     ]
   },
   {
@@ -20,11 +20,11 @@ const categories = [
     description: "Core hubs for herd management, aquatics, and feed planning.",
     icon: <Tractor className="w-6 h-6" />,
     apps: [
-      { name: "Livestock", url: "https://livestock.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Livestock", description: "Core livestock hub for cattle, swine, sheep/goats, herd planning, animal growth, and breeding." },
-      { name: "Beef", url: "https://beef.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Beef", description: "Beef cattle economics and production hub for Rural Utility Cost." },
-      { name: "Dairy", url: "https://dairy.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Dairy", description: "Dairy economics hub for milk forecasting, feed efficiency, margins, and expansion planning." },
-      { name: "Aqua", url: "https://aqua.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Aqua", description: "Aquaculture economics hub for feed, harvest, survival, profit, and system comparisons." },
-      { name: "Feed", url: "https://feed.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Feed", description: "Feed planning and cost hub for ration planning, feed conversion, storage, and waste reduction." }
+      { name: "Livestock", url: "https://livestock.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Livestock", description: "Core livestock hub for cattle, swine, sheep/goats, herd planning, animal growth, and breeding." },
+      { name: "Beef", url: "https://beef.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Beef", description: "Beef cattle economics and production hub for Rural Utility Cost." },
+      { name: "Dairy", url: "https://dairy.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Dairy", description: "Dairy economics hub for milk forecasting, feed efficiency, margins, and expansion planning." },
+      { name: "Aqua", url: "https://aqua.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Aqua", description: "Aquaculture economics hub for feed, harvest, survival, profit, and system comparisons." },
+      { name: "Feed", url: "https://feed.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Feed", description: "Feed planning and cost hub for ration planning, feed conversion, storage, and waste reduction." }
     ]
   },
   {
@@ -32,11 +32,11 @@ const categories = [
     description: "Soil analysis, weather support, pest mitigation, and land valuation tools.",
     icon: <Sprout className="w-6 h-6" />,
     apps: [
-      { name: "Soil", url: "https://soil.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Soil", description: "Soil test, nutrient recommendation, fertilizer comparison, and crop fertility planning tools." },
-      { name: "Weather", url: "https://weather.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Weather", description: "Weather-driven agricultural decision support for planting, spraying, frost, and heat." },
-      { name: "Pest", url: "https://pest.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Pest", description: "Integrated pest management hub for pest risk, scouting, trap counts, and spray timing." },
-      { name: "Carbon", url: "https://carbon.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Carbon", description: "Farm carbon accounting and emissions benchmarking tools for rural operations." },
-      { name: "Land", url: "https://land.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Land", description: "Rural land valuation and parcel comparison tools for utilities, lease, and acreage decisions." }
+      { name: "Soil", url: "https://soil.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Soil", description: "Soil test, nutrient recommendation, fertilizer comparison, and crop fertility planning tools." },
+      { name: "Weather", url: "https://weather.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Weather", description: "Weather-driven agricultural decision support for planting, spraying, frost, and heat." },
+      { name: "Pest", url: "https://pest.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Pest", description: "Integrated pest management hub for pest risk, scouting, trap counts, and spray timing." },
+      { name: "Carbon", url: "https://carbon.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Carbon", description: "Farm carbon accounting and emissions benchmarking tools for rural operations." },
+      { name: "Land", url: "https://land.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Land", description: "Rural land valuation and parcel comparison tools for utilities, lease, and acreage decisions." }
     ]
   },
   {
@@ -44,8 +44,8 @@ const categories = [
     description: "Tools tailored for controlled environment agriculture and nurseries.",
     icon: <Trees className="w-6 h-6" />,
     apps: [
-      { name: "Hydroponic", url: "https://hydroponic.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Hydroponic", description: "Hydroponic planning hub for nutrients, EC/pH, energy cost, and profitability." },
-      { name: "Greenhouse", url: "https://greenhouse.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Greenhouse", description: "Greenhouse economics hub for startup cost, heating, ROI, and crop profitability." }
+      { name: "Hydroponic", url: "https://hydroponic.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Hydroponic", description: "Hydroponic planning hub for nutrients, EC/pH, energy cost, and profitability." },
+      { name: "Greenhouse", url: "https://greenhouse.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Greenhouse", description: "Greenhouse economics hub for startup cost, heating, ROI, and crop profitability." }
     ]
   },
   {
@@ -53,12 +53,12 @@ const categories = [
     description: "Operational insights for grid mechanics, pricing, logistics, and storage.",
     icon: <Warehouse className="w-6 h-6" />,
     apps: [
-      { name: "Storage", url: "https://storage.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Storage", description: "Storage and inventory hub for feed, grain, and equipment storage planning." },
-      { name: "Transport", url: "https://transport.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Transport", description: "Transport logic hub for hauling cost, fuel use, delivery planning, and route capacity." },
-      { name: "Grid", url: "https://grid.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Grid", description: "Grid utility hub and quick decision methods for rural properties." },
-      { name: "Price", url: "https://price.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Price", description: "Universal pricing and cost estimation hub for Rural Utility Cost." },
-      { name: "Quality", url: "https://quality.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Quality", description: "Quality assurance and quality control hub for Rural Utility Cost." },
-      { name: "Solve", url: "https://solve.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Solve", description: "IoT and automation cost estimation hub for Rural Utility Cost." }
+      { name: "Storage", url: "https://storage.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Storage", description: "Storage and inventory hub for feed, grain, and equipment storage planning." },
+      { name: "Transport", url: "https://transport.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Transport", description: "Transport logic hub for hauling cost, fuel use, delivery planning, and route capacity." },
+      { name: "Grid", url: "https://grid.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Grid", description: "Grid utility hub and quick decision methods for rural properties." },
+      { name: "Price", url: "https://price.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Price", description: "Universal pricing and cost estimation hub for Rural Utility Cost." },
+      { name: "Quality", url: "https://quality.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Quality", description: "Quality assurance and quality control hub for Rural Utility Cost." },
+      { name: "Solve", url: "https://solve.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Solve", description: "IoT and automation cost estimation hub for Rural Utility Cost." }
     ]
   },
   {
@@ -66,10 +66,10 @@ const categories = [
     description: "The primary hubs, cross-app entry points, and central resources.",
     icon: <Globe className="w-6 h-6" />,
     apps: [
-      { name: "Platform", url: "https://ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Platform", description: "Main Rural Utility Cost hub and shared platform for navigation, branding, and cross-app experience." },
-      { name: "Habitat", url: "https://habitat.ruralutilitycost.com", repo: "https://github.com/dsgiri/ruralutilitycost-habitat", description: "Public-facing site and content hub for Rural Utility Cost resources and ecosystem." },
-      { name: "USDA", url: "https://usda.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-USDA", description: "USDA-linked rural planning hub for acreage, payments, and decision-support tools." },
-      { name: "BreakTime", url: "https://breaktime.ruralutilitycost.com", repo: "https://github.com/dsgiri/RuralUtilityCost-BreakTime", description: "Rural utility break and pause utility concept for managing rural downtime tasks." }
+      { name: "Platform", url: "https://ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-Platform", description: "Main Rural Utility Cost hub and shared platform for navigation, branding, and cross-app experience." },
+      { name: "Habitat", url: "https://habitat.ruralopstools.com", repo: "https://github.com/dsgiri/ruralutilitycost-habitat", description: "Public-facing site and content hub for Rural Utility Cost resources and ecosystem." },
+      { name: "USDA", url: "https://usda.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-USDA", description: "USDA-linked rural planning hub for acreage, payments, and decision-support tools." },
+      { name: "BreakTime", url: "https://breaktime.ruralopstools.com", repo: "https://github.com/dsgiri/RuralUtilityCost-BreakTime", description: "Rural utility break and pause utility concept for managing rural downtime tasks." }
     ]
   }
 ];

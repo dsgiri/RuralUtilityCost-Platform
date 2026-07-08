@@ -100,33 +100,33 @@ export default function About() {
             </p>
             
             <div className="grid sm:grid-cols-2 gap-6">
-              <a href="https://plan.ruralutilitycost.com" target="_blank" rel="noopener noreferrer" className="block p-6 border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-2xl group">
+              <a href="https://plan.ruralopstools.com" target="_blank" rel="noopener noreferrer" className="block p-6 border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-2xl group">
                 <Map className="w-8 h-8 text-[#1a5f3f] dark:text-green-400 mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2 group-hover:text-[#1a5f3f] dark:group-hover:text-green-300 transition-colors">plan.ruralutilitycost.com</h3>
+                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2 group-hover:text-[#1a5f3f] dark:group-hover:text-green-300 transition-colors">plan.ruralopstools.com</h3>
                 <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                   The foundation. Use this space for tactical planning, budgeting, and preparing for known costs. When you need to know exactly what a fence or a well will cost today, start here.
                 </p>
               </a>
 
-              <a href="https://forecast.ruralutilitycost.com" target="_blank" rel="noopener noreferrer" className="block p-6 border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-2xl group">
+              <a href="https://forecast.ruralopstools.com" target="_blank" rel="noopener noreferrer" className="block p-6 border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-2xl group">
                 <LineChart className="w-8 h-8 text-[#1a5f3f] dark:text-green-400 mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2 group-hover:text-[#1a5f3f] dark:group-hover:text-green-300 transition-colors">forecast.ruralutilitycost.com</h3>
+                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2 group-hover:text-[#1a5f3f] dark:group-hover:text-green-300 transition-colors">forecast.ruralopstools.com</h3>
                 <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                   The horizon. Use this environment for trend analysis and future outlooks. Understand how changing fuel prices or feed costs might affect your margins next season.
                 </p>
               </a>
 
-              <a href="https://whatif.ruralutilitycost.com" target="_blank" rel="noopener noreferrer" className="block p-6 border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-2xl group">
+              <a href="https://whatif.ruralopstools.com" target="_blank" rel="noopener noreferrer" className="block p-6 border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-2xl group">
                 <Calculator className="w-8 h-8 text-[#1a5f3f] dark:text-green-400 mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2 group-hover:text-[#1a5f3f] dark:group-hover:text-green-300 transition-colors">whatif.ruralutilitycost.com</h3>
+                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2 group-hover:text-[#1a5f3f] dark:group-hover:text-green-300 transition-colors">whatif.ruralopstools.com</h3>
                 <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                   The sandbox. Test scenarios and compare outcomes side-by-side. "What if I buy 20 more head of cattle vs upgrade my tractor?" Compare the exact financial tradeoffs.
                 </p>
               </a>
 
-              <a href="https://predictor.ruralutilitycost.com" target="_blank" rel="noopener noreferrer" className="block p-6 border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-2xl group">
+              <a href="https://predictor.ruralopstools.com" target="_blank" rel="noopener noreferrer" className="block p-6 border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-2xl group">
                 <Target className="w-8 h-8 text-[#1a5f3f] dark:text-green-400 mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2 group-hover:text-[#1a5f3f] dark:group-hover:text-green-300 transition-colors">predictor.ruralutilitycost.com</h3>
+                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2 group-hover:text-[#1a5f3f] dark:group-hover:text-green-300 transition-colors">predictor.ruralopstools.com</h3>
                 <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                   The models. Access model-based predictions and confidence-based insights. For advanced decision-makers looking for data-driven probabilities on crop yields or market timing.
                 </p>
