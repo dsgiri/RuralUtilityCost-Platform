@@ -49,9 +49,15 @@ export default function Livestock() {
   const results = calculate();
 
   return (
-    <div className="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
-      <SEO 
-        title="Livestock Water Requirements Calculator"
+    <div className="w-full max-w-7xl mx-auto p-4 sm:p-6">
+      <div className="mb-8">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Livestock Water Calculator</h1>
+        <p className="mt-2 text-lg text-gray-600 max-w-2xl">Calculate daily and weekly water needs for farm animals including cattle, horses, pigs, sheep, goats, and chickens.</p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <SEO 
+          title="Livestock Water Requirements Calculator"
         description="Calculate daily and weekly water needs for farm animals including cattle, horses, pigs, sheep, goats, and chickens."
         jsonLd={{
           "@context": "https://schema.org",
@@ -162,26 +168,39 @@ export default function Livestock() {
           }}
         />
 
-        {/* SEO SNIPPET / FAQ */}
-        <div className="bg-[#1a5f3f]/5 rounded-xl border border-[#1a5f3f]/10 p-5 flex flex-col md:flex-row gap-8">
-          <div className="flex-1">
-            <h4 className="text-xs font-bold text-[#1a5f3f] mb-2 uppercase">Guide: Livestock Hydration</h4>
-            <div className="text-[11px] leading-relaxed text-gray-700 space-y-2">
-              <p>Ensuring continuous access to fresh water is a financial necessity. Mild dehydration stalls weight gain in beef cattle, and aggressively drops milk production.</p>
-              <p>Rules of Thumb: Cattle (Dry): 15 gal/day per 100 lbs. Cattle (Lactating): 70 - 140+ gallons daily. Chickens: 0.5 gal per 10 birds. </p>
-            </div>
-          </div>
-          <div className="hidden md:block w-px bg-[#1a5f3f]/10"></div>
-          <div className="flex-1">
-            <h4 className="text-xs font-bold text-[#1a5f3f] mb-2 uppercase">FAQ Quick Answers</h4>
-            <ul className="text-[11px] space-y-2 text-gray-600">
-              <li><strong>Heat Spikes:</strong> For heavy cattle, crossing 70°F spikes consumption roughly 1 gallon per additional 10 degrees.</li>
-              <li><strong>Lactation:</strong> Milk is ~90% water. Heavy producers push fluid out continually.</li>
-              <li><strong>Algae Control:</strong> Automatic waterers hooked directly to high-pressure lines reduce stagnant algae.</li>
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-8 print:hidden">
+          <h3 className="text-lg font-bold text-gray-900 mb-4">Formula & Assumptions</h3>
+          <div className="space-y-4 text-sm text-gray-600">
+            <p><strong>Logic:</strong> <code>Daily Need = Base Water Rate × Temperature Multiplier × Lactation Multiplier</code></p>
+            <p><strong>Base Assumptions:</strong></p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Cattle (Dry): 15 gal/day per 1000 lbs.</li>
+              <li>Cattle (Lactating): 70 - 140+ gallons daily depending on production.</li>
+              <li>Chickens: 0.5 gal per 10 birds.</li>
             </ul>
+            <p><strong>Temperature Multipliers:</strong> For heavy cattle, crossing 70°F spikes consumption roughly 1 gallon per additional 10 degrees.</p>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Why is water so important for livestock?</h3>
+              <p className="text-gray-600 mb-2">
+                Ensuring continuous access to fresh water is a financial necessity. Mild dehydration stalls weight gain in beef cattle, and aggressively drops milk production.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">How can I control algae in troughs?</h3>
+              <p className="text-gray-600 mb-2">
+                Automatic waterers hooked directly to high-pressure lines reduce stagnant algae compared to large standing tanks. You can also use approved copper sulfate treatments or regular scrubbing.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

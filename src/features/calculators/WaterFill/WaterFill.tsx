@@ -74,9 +74,15 @@ export default function WaterFill() {
   };
 
   return (
-    <div className="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
-      <SEO 
-        title="Water Fill & Hauling Cost Calculator | Rural Utility Cost"
+    <div className="w-full max-w-7xl mx-auto p-4 sm:p-6">
+      <div className="mb-8">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Water Fill Charge Calculator</h1>
+        <p className="mt-2 text-lg text-gray-600 max-w-2xl">Calculate water delivery cost for rural homes, wells, septic, and pools based on your local ZIP code.</p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <SEO 
+          title="Water Fill & Hauling Cost Calculator | Rural Utility Cost"
         description="Calculate water delivery cost for rural homes, wells, septic, and pools based on your local ZIP code."
         jsonLd={jsonLd}
       />
@@ -201,7 +207,7 @@ export default function WaterFill() {
           }}
         />
 
-        <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-4 mt-2">
+        <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-4 mt-2 print:hidden">
           <h3 className="text-lg font-bold text-gray-900 mb-2">Build Your Full Rural Water Plan</h3>
           <p className="text-gray-600 mb-4">
             Compare hauling water against drilling a permanent well and estimate your septic system costs.
@@ -216,8 +222,19 @@ export default function WaterFill() {
           </div>
         </div>
 
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-8 print:hidden">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Formula & Assumptions</h2>
+          <div className="space-y-4 text-sm text-gray-600">
+            <p><strong>Logic:</strong> Water delivery costs are mostly transportation costs. This calculator estimates your cost based on local municipal fill rates and distance.</p>
+            <p><code>Total Cost = (Gallons × Base Rate) + Delivery Fee</code>.</p>
+            <p><strong>Base Rate:</strong> Standard rate is around $0.06/gal but varies by ZIP code based on local water scarcity. Potable water carries a 1.5x premium.</p>
+            <p><strong>Delivery Fee:</strong> <code>$75 base + ($2.50 × Delivery Distance in miles)</code>.</p>
+            <p><strong>Truckloads:</strong> A standard water truck holds 4,000 gallons. Any fractional amount requires another full trip.</p>
+          </div>
+        </div>
+
         {/* AI-FRIENDLY FAQ SECTION */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 print:hidden">
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6 print:hidden">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
           <div className="space-y-6">
             <div>
@@ -249,6 +266,7 @@ export default function WaterFill() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

@@ -500,7 +500,7 @@ export default function RuralLand() {
 
           <CalculatorSanityContent uniqueCode="CALC-PROP-101" />
 
-          <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6">
+          <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6 print:hidden">
             <h3 className="text-lg font-bold text-gray-900 mb-2">Build Your Full Land Plan</h3>
             <p className="text-gray-600 mb-4">
               Determine your complete property operating and construction costs.
@@ -515,17 +515,34 @@ export default function RuralLand() {
             </div>
           </div>
 
-          <div className="mt-8 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Understanding Rural Land Value</h2>
+          <div className="mt-8 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Formula & Assumptions</h2>
             
             <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
-              <p>Unlike suburban homes, rural land valuation is highly volatile. A 10-acre parcel in the same county can range from $20,000 to $200,000 based entirely on access, restrictions, and topography.</p>
+              <p><strong>Logic:</strong> Unlike suburban homes, rural land valuation is highly volatile. This calculator uses baseline multipliers to adjust the gross acreage value based on access, utilities, and improvements.</p>
+              <p><code>Adjusted Value = (Acres × Price Per Acre) × Access Multiplier + Utilities + Improvements</code>.</p>
               
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">The Impact of Landlocked Property</h3>
               <p>Property without legal access to a public road is "landlocked." Even if there is a historic dirt path leading to the property, if you do not have a recorded deeded easement, you cannot legally access it. This destroys value (often up to 50% off market rates) because banks will not finance it and you cannot pull building permits.</p>
 
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Buying Raw Land vs Improved</h3>
               <p>When buying raw land for a homesite, buyers typically underestimate the cost of improvements. Drilling a well, installing a septic system, pushing an access driveway, and running power poles can easily add $40,000 to $60,000 to the real cost of the property before a foundation is ever poured.</p>
+            </div>
+          </div>
+
+          <div className="mt-6 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm print:hidden">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight mb-6">Frequently Asked Questions</h2>
+            <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-bold text-gray-900 dark:text-gray-100">Do I really need a survey?</h4>
+                  <p>Yes. Fences in rural areas are rarely on the actual property line. Without a survey, you do not know what you are buying, and you risk building structures on land you don't own.</p>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 dark:text-gray-100">Can I just run solar instead of paying to bring power in?</h4>
+                  <p>Yes, off-grid solar is increasingly popular, but it requires a high upfront capital cost (often $15,000 to $40,000 for a whole-house system) and dedicated maintenance. It also may not be permitted for your primary residence depending on strict county building codes.</p>
+                </div>
+              </div>
             </div>
           </div>
 

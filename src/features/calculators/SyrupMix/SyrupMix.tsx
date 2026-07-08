@@ -235,6 +235,25 @@ export default function SyrupMix() {
             </button>
           </div>
         </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-8 print:hidden col-span-1 lg:col-span-2">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">When do I use a 1:1 vs 2:1 ratio?</h3>
+              <p className="text-gray-600 mb-2">
+                Use 1:1 (one part sugar to one part water) in the spring to stimulate comb building and brood rearing. Use 2:1 (two parts sugar to one part water) in the fall when the bees need to rapidly store thick syrup for winter without having to evaporate as much moisture.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Should I boil the sugar water?</h3>
+              <p className="text-gray-600 mb-2">
+                No. You should heat the water to dissolve the sugar easily, especially for 2:1 syrup, but do not boil the mixture. Boiling sugar can create Hydroxymethylfurfural (HMF), which is toxic to bees.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );
